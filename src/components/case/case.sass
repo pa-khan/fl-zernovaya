@@ -1,0 +1,20 @@
+.case
+    min-width: 2000px
+    min-height: 2000px
+    margin: 0 auto
+    padding-right: calc(50% - var(--case-width) / 2)
+    padding-left: calc(50% - var(--case-width) / 2)
+    .case
+        padding-left: 0
+        padding-right: 0
+
+@media screen and (min-width: 768px)
+    .case
+        --case-md-width: 1170px
+        --case-width: var(--case-md-width)
+
+@media screen and (max-width: 767px)
+    .case
+        --case-xs-padding: 15px
+        padding-left: var(--case-xs-padding)
+        padding-right: var(--case-xs-padding)

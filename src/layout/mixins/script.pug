@@ -1,0 +1,7 @@
+mixin script(fileName, type)
+    if type == 'blocks'
+        script(src=require('Blocks/' + fileName + '/' + fileName + '.js'))
+    else if type == 'comp'
+        script(src=require('Components/' + fileName + '/' + fileName + '.js'))
+    else
+        script(src=require('Scripts/' + fileName))

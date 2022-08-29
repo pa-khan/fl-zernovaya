@@ -1,0 +1,7 @@
+mixin style(fileName, type)
+    if type == 'blocks'
+        link(rel="stylesheet" href=require('Blocks/' + fileName + '/' + fileName + '.sass'))
+    else if type == 'comp'
+        link(rel="stylesheet" href=require('Components/' + fileName + '/' + fileName + '.sass'))
+    else
+        link(rel="stylesheet" href=require('Styles/' + fileName))

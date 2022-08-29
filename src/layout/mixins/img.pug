@@ -1,0 +1,3 @@
+mixin img(fileName, name)
+    picture(class!=attributes.class)
+        img(src=require('Images/' + fileName) alt=name ? name : '' title=name ? name : '')
