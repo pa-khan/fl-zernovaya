@@ -1,0 +1,48 @@
+.checkbox
+    display: flex
+    cursor: pointer
+    input
+        display: none
+    &__box
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid #DDDDDD
+        transition: var(--transition-main)
+        margin-right: 10px
+        svg
+            transform: scale(0)
+            transition: var(--transition-main)
+    &__text
+        line-height: 1
+        color: var(--color-gray)
+        padding-top: 4px
+    &.--sm
+        .checkbox
+            &__box
+                width: 20px
+                min-width: 20px
+                height: 20px
+                padding: 4px
+                border-radius: 4px
+                margin-right: 10px
+
+    &.--md
+        .checkbox
+            &__box
+                width: 24px
+                min-width: 24px
+                height: 24px
+                padding: 5px
+                border-radius: 6px
+                margin-right: 15px
+    &.--checked
+        .checkbox
+            &__box
+                border-color: var(--color-black)
+                background-color: var(--color-black)
+                svg
+                    transform: scale(1)
+            &__text
+                color: var(--color-black)
+                font-weight: 500

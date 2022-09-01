@@ -1,5 +1,6 @@
 import Field from 'Components/field/field';
 import Select from 'Components/select/select';
+import Check from 'Components/check/check';
 import Incdec from 'Components/incdec/incdec';
 
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Field.init();
     Select.init();
+    Check.init();
     Incdec.init();
 
     // Typograpy

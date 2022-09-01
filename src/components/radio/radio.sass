@@ -1,0 +1,55 @@
+.radio
+    display: flex
+    cursor: pointer
+    input
+        display: none
+    &__box
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+
+        border-radius: 50%
+        border: 1px solid #DDDDDD
+        transition: var(--transition-main)
+        margin-right: 10px
+        &:before
+            content: ''
+            top: 50%
+            left: 50%
+            width: 100%
+            height: 100%
+            transform: scale(0)
+            transition: var(--transition-main)
+            background-color: var(--color-black)
+            border-radius: 50%
+    &__text
+        line-height: 1
+        color: var(--color-gray)
+        padding-top: 4px
+    &.--sm
+        .radio
+            &__box
+                width: 20px
+                min-width: 20px
+                height: 20px
+                padding: 4px
+                margin-right: 10px
+
+    &.--md
+        .radio
+            &__box
+                width: 24px
+                min-width: 24px
+                height: 24px
+                padding: 5px
+                margin-right: 15px
+    &.--checked
+        .radio
+            &__box
+                border-color: var(--color-black)
+                &::before
+                    transform: scale(1)
+            &__text
+                color: var(--color-black)
+                font-weight: 500

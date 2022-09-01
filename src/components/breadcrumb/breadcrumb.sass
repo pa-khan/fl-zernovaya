@@ -1,0 +1,33 @@
+.breadcrumb
+    padding-top: 10px
+    padding-bottom: 40px
+    &__list
+        display: flex
+        flex-wrap: wrap
+    &__item
+        font-size: 14px
+        line-height: 1.6
+        margin-right: 10px
+        &:after
+            display: inline-block
+            vertical-align: middle
+            content: ''
+            width: 5px
+            height: 9px
+            margin-left: 10px
+            position: relative
+            top: -1px
+            background: url('Images/chevron-black.svg') no-repeat center / 100%
+        &:last-child
+            margin-right: 0
+            &:after
+                display: none
+    &__link
+        color: var(--color-gray)
+        border-bottom: 1px solid transparent
+        &:hover
+            color: var(--color-black)
+            border-color: var(--color-black)
+    &__name
+        padding-top: 1px
+        display: inline-block

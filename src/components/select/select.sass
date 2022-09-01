@@ -13,11 +13,13 @@
         transition: var(--transition-main)
     &__title
         padding-top: 2px
+        margin-right: 10px
+        line-height: 1
     &__icon
         width: 8px
         height: 12px
         fill: #000
-        margin-left: 10px
+        margin-left: auto
         transform: rotate(90deg)
         transition: var(--transition-main)
         background: url('Images/chevron-black.svg') no-repeat center / 100%
@@ -44,7 +46,7 @@
             color: var(--color-white)
             background-color: var(--color-black)
         &:last-child
-            border-radius: 0 0 5px 5px
+            // border-radius: 0 0 5px 5px
     &.--bb
         .select
             &__title
@@ -63,6 +65,24 @@
                 border-color: transparent
             &__drop
                 border-radius: 0 0 5px 5px
+    &.--b-gray
+        .select
+            &__area
+                border: 1px solid #DDD
+                padding-left: 10px
+                padding-right: 10px
+                border-radius: 5px
+                padding-top: 2px
+            &__title
+                border-color: transparent
+            &__drop
+                border-radius: 0 0 5px 5px
+    &.--xs
+        .select
+            &__area
+                font-size: 18px
+            &__title
+                padding-top: 2px
     &.--open
         z-index: 10
         .select
