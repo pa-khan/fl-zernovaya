@@ -5,7 +5,7 @@ header.header
     .header__mob.case.row
         a.header__logo(href="index.html")
             +img('logo.svg', 'icon')
-        .header__ham #[div]#[div]#[div]
+        .header__ham.ham
     .header__wrap.case.row
         mixin link(name, href)
             .header__nav-item
@@ -54,6 +54,6 @@ header.header
             .btn__icon
                 +img('user-round.svg', 'icon')
             .btn__text Войти
-
     
 +script('search', 'blocks')
++script('header', 'blocks')
