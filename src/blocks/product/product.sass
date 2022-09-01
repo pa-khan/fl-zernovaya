@@ -29,6 +29,7 @@
         margin-bottom: 25px
     &__name
         margin-bottom: 10px
+        will-change: transform
         a
             &::before
                 z-index: 1
@@ -42,14 +43,24 @@
         line-height: 1.5
         color: var(--color-gray)
         margin-bottom: 20px
+        will-change: transform
     &__text
         font-size: 14px
         line-height: 1.5
         margin-bottom: 20px
+        will-change: transform
     &__stats
         margin-bottom: 20px
+        will-change: transform
     &__select
         margin-right: auto
+        &.--b-black
+            .select
+                &__area
+                    padding-left: 10px
+                    padding-right: 10px
+                    padding-top: 2px
+                    padding-bottom: 2px
     &__controls
         z-index: 3
         position: relative
@@ -60,12 +71,14 @@
         position: relative
         border-top: 1px dashed #EDEDED
         padding-top: 20px
+        will-change: transform
     &__btns
         z-index: 2
         position: relative
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 10px
+        will-change: transform
     &__btn-add
         width: 100%
     &__out-stock

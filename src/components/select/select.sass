@@ -11,10 +11,12 @@
         align-items: center
         height: 37px
         transition: var(--transition-main)
+        will-change: transform
     &__title
         padding-top: 2px
         margin-right: 10px
         line-height: 1
+        will-change: transform
     &__icon
         width: 8px
         height: 12px
@@ -65,24 +67,10 @@
                 border-color: transparent
             &__drop
                 border-radius: 0 0 5px 5px
-    &.--b-gray
-        .select
-            &__area
-                border: 1px solid #DDD
-                padding-left: 10px
-                padding-right: 10px
-                border-radius: 5px
-                padding-top: 2px
-            &__title
-                border-color: transparent
-            &__drop
-                border-radius: 0 0 5px 5px
-    &.--xs
-        .select
-            &__area
-                font-size: 18px
-            &__title
-                padding-top: 2px
+        &.--open
+            .select
+                &__area
+                    border-radius: 5px 5px 0 0
     &.--open
         z-index: 10
         .select
