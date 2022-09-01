@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     Field.init();
     Select.init();
     Incdec.init();
+
+    // Typograpy
+    const $texts = document.querySelectorAll('.t1, .t2, .t3');
+    $texts.forEach(($text) => {
+        setTypograpyClasses($text);
+    });
 });
 
 function initDefaultClasses() {
@@ -42,4 +48,11 @@ function setSizes() {
 
     body.style.setProperty('--d-w', documentWidth + 'px');
     body.style.setProperty('--d-h', documentHeight + 'px');
+}
+
+function setTypograpyClasses($element) {
+    $element.$children = $element.querySelectorAll('h1, h2, h3, h4, h5, h6, p, ul, ol, table');
+    $element.$children.forEach(($child) => {
+        $child.classList.add($child.tagName.toLowerCase());
+    });
 }

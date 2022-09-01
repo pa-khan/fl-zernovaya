@@ -1,5 +1,5 @@
 section.steps.case
-    .steps__title.h2 #[h2 ]
+    .steps__title.h2 #[h2 Как сделать оптовый заказ]
     .steps__list
         mixin stepsItem(icon, name, text)
             .steps__item
@@ -11,3 +11,6 @@ section.steps.case
         +stepsItem('doc.svg', 'Шаг 02', 'Заполнение профиля')
         +stepsItem('reg.svg', 'Шаг 03', 'Оформление <br>и оплата заказа')
         +stepsItem('box.svg', 'Шаг 04', 'Мы собираем и отправляем заказ')
+    .steps__bg
+        +img('steps-bg.png')
++style('steps', 'blocks')

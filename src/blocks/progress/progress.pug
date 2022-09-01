@@ -1,14 +1,14 @@
-.progress.case
-    .progress__wrap
-        .progress__content
-            h2 Достижения 
-            p Мы любим то, чем занимаемся, поэтому постоянно ищем возможности стать в этом лучше. Вот небольшой список чемпионатов, в которых мы принимали участие: 
-        .progress__list
-            .progress__item
-                .progress__item-name.h4 Национальная премия бариста 2022
-                .progress__item-img
-                    +img('barista-year.png')
-            .progress__item
-                .progress__item-name.h4 Cup Tasters Battle 2022
-                .progress__item-img.--cover
-                    +img('cup-tasters-battle.jpg')
+.progress.case.row
+    .progress__content.t1
+        h2 Достижения 
+        p Мы любим то, чем занимаемся, поэтому постоянно ищем возможности стать в этом лучше. Вот небольшой список чемпионатов, в которых мы принимали участие: 
+    .progress__list.row
+        .progress__item
+            .progress__item-name.h4 Национальная премия бариста 2022
+            .progress__item-img
+                +img('barista-year.png')
+        .progress__item
+            .progress__item-name.h4 Cup Tasters Battle 2022
+            .progress__item-img.--cover
+                +img('cup-tasters-battle.jpg')
++style('progress', 'blocks')

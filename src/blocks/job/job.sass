@@ -1,0 +1,42 @@
+.job
+    padding-top: 100px
+    padding-bottom: 50px
+    &__text
+        .h2
+            margin-top: 100px
+            &:first-child
+                margin-top: 0
+        .ul, .h4
+            &.--pl
+                padding-left: 26px
+    &__list
+        margin-top: 50px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        gap: 20px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 30px
+        background: #FAFAFA
+        border-radius: 10px
+        *:last-child
+            margin-bottom: 0
+    &__name
+        font-size: 20px
+        line-height: 1
+        font-weight: 700
+        margin-bottom: 20px
+    &__price
+        font-size: 20px
+        line-height: 1
+        font-weight: 500
+        margin-bottom: 20px
+    &__text
+        line-height: 1.6
+        margin-bottom: 20px
+    &__btn
+        border-radius: 10px
+        padding: 2px 20px 0

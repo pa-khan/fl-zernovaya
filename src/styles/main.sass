@@ -2,6 +2,8 @@
 @import vars
 @import reset
 
+@import 'Styles/swiper'
+
 @import 'Components/case/case'
 @import 'Components/btn/btn'
 @import 'Components/field/field'
@@ -45,6 +47,43 @@
     font-size: 20px
     line-height: 1.5
     font-weight: 500
+
+.t1
+    font-size: 18px
+    line-height: 1.6
+    h2
+        margin-bottom: 20px
+    h4
+        margin-bottom: 20px
+    p
+        margin-bottom: 28px
+    *:first-child
+        margin-top: 0
+    *:last-child
+        margin-bottom: 0
+    ul
+        display: flex
+        flex-direction: column
+        margin-top: 30px
+        margin-bottom: 30px
+    li
+        position: relative
+        display: block
+        padding-left: 30px
+        margin-bottom: 20px
+        &::before
+            position: absolute
+            content: ''
+            width: 15px
+            height: 15px
+            left: 0
+            top: 4px
+            background: var(--color-black)
+            border-radius: 50%
+    strong, b
+        font-weight: 700
+    i, em
+        font-style: italic
 
 .dots
     display: flex

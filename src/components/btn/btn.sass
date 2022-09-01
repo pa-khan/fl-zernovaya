@@ -12,6 +12,7 @@
     appearance: none
     border: none
     cursor: pointer
+    padding-top: 2px
     &__text
         transition: var(--transition-main)
     &.--inline
@@ -40,6 +41,23 @@
         &:hover
             color: var(--color-white)
             background: var(--color-black)
+            .btn
+                &__icon
+                    path, rect
+                        &[fill]
+                            fill: var(--color-white)
+                        &[stroke]
+                            stroke: var(--color-white)
+                &__text
+                    color: var(--color-white)
+    &.--bg-white
+        color: var(--color-black)
+        background: var(--color-white)
+        border: 1px solid var(--color-white)
+        &:hover
+            color: var(--color-white)
+            background: var(--color-black)
+            border-color: var(--color-black)
             .btn
                 &__icon
                     path, rect

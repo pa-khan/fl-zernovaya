@@ -1,0 +1,36 @@
+.slide
+    min-height: 700px
+    display: flex
+    align-items: center
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        color: #fff
+        padding-top: 50px
+        padding-bottom: 50px
+        max-width: 650px
+        *:last-child
+            margin-bottom: 0
+    &__title
+        margin-bottom: 5px
+    &__text
+        font-size: 20px
+        line-height: 1.5
+        margin-bottom: 30px
+    &__btn
+        &.btn
+            padding-left: 40px
+            padding-right: 40px
+    &__bg
+        z-index: -1
+        &::after
+            z-index: 5
+            opacity: 0.3
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: var(--color-black)

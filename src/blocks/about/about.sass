@@ -1,1 +1,41 @@
+.about
+    padding-top: 100px
+    padding-bottom: 100px
+    background: var(--color-gray-lighten)
+    &__title
+        margin-bottom: 40px
+    &__item
+        position: relative
+        margin: 0 -15px 70px
+        &:last-child
+            margin-bottom: 0
+        &:nth-of-type(odd)
+            .about
+                &__img
+                    &.--lg
+                        picture
+                            left: 15px
+                            right: -160px
+                            width: auto
+        &:nth-of-type(2n)
+            .about
+                &__text
+                    order: 2
 
+    &__text, &__img
+        width: 50%
+        padding-left: 15px
+        padding-right: 15px
+    &__img
+        position: relative
+        &.--lg
+            picture
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+            picture, img
+                width: 100%
+                max-width: none !important
+            img
+                object-fit: cover
