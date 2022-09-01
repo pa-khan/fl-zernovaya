@@ -1,7 +1,7 @@
 .product
     position: relative
     border-radius: 10px
-    padding: 20px 18px 30px
+    padding: 15px 18px 30px
     background-color: var(--color-gray-light)
     transition: var(--transition-main)
     overflow: hidden
@@ -25,8 +25,8 @@
         align-items: center
         justify-content: center
         flex-direction: column
-        height: 220px
-        margin-bottom: 25px
+        height: 250px
+        margin-bottom: 10px
     &__name
         margin-bottom: 10px
         // will-change: transform
@@ -80,7 +80,7 @@
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 10px
-        // will-change: transform
+        will-change: transform
     &__btn-add
         width: 100%
     &__out-stock
@@ -122,3 +122,8 @@
         transform: none
         box-shadow: none
         background-color: inherit
+
+@media screen and (max-width: 1179px)
+    .price
+        &__btn-add
+            width: 100%
