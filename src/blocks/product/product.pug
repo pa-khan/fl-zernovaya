@@ -5,8 +5,9 @@ mixin product(img = 'product-1.png', name = 'Эфиопия Акация', vendo
             +img('heart-bg.svg', 'icon')
         .product__img
             +img(img)
-        .product__name.h4 #[a(href="product.html")= name]
-        .product__vendor-code= vendor_code
+        .product__title
+            .product__name.h4 #[a(href="product.html")= name]
+            .product__vendor-code= vendor_code
         .product__text= text
         if stats
             .product__stats.stats
