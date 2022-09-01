@@ -1,5 +1,5 @@
 mixin product(img = 'product-1.png', name = 'Эфиопия Акация', vendor_code = 'Артикул: 084', text = 'Цветочный аромат и шелковистое тело отлично дополняет фруктовая кислотность, окрашенная сладостью спелой дыни и оттенками малинового варенья. В завершении Вас ждет нежное послевкусие черешни.', stats = true, price_1 = 3099, price_2 = 10099)
-    .product(class!=attributes.class)
+    .product(class!=attributes.class class=attributes.disabled ? '--disabled' : null)
         .product__btn-favorit.btn
             +img('heart.svg', 'icon')
             +img('heart-bg.svg', 'icon')
@@ -54,3 +54,9 @@ mixin product(img = 'product-1.png', name = 'Эфиопия Акация', vendo
             .product__btns
                 a.product__btn-add.btn.--md.--bg-black.--round(href="javascript:;") В корзину
                 a.product__btn-more.btn.--md.--b-black.--round(href="product.html") Подробнее
+
+        if attributes.disabled
+            .product__out-stock
+                .product__out-stock-icon
+                    +img('sad-face.svg', 'icon')
+                .product__out-stock-title Нет в наличии

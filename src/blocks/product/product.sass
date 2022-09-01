@@ -3,7 +3,12 @@
     border-radius: 10px
     padding: 15px 18px 30px
     background-color: var(--color-gray-light)
+<<<<<<< HEAD
 
+=======
+    transition: var(--transition-main)
+    overflow: hidden
+>>>>>>> c25e6206a37c69ba6ec19c403df37aee225d3e74
     &__btn-favorit
         z-index: 5
         position: absolute
@@ -81,6 +86,27 @@
         will-change: transform
     &__btn-add
         width: 100%
+    &__out-stock
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 10px
+        z-index: 10
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        color: #fff
+        background-color: rgba(#363636, 0.8)
+        pointer-events: auto
+        &-icon
+            margin-bottom: 10px
+        &-title
+            font-size: 30px
+            line-height: 1.5
+            font-weight: 500
     &.--favorit
         .product
             &__btn-favorit
@@ -94,8 +120,16 @@
         transform: scale(1.02)
         background-color: var(--color-white)
         box-shadow: 0px 4px 20px rgba(106, 106, 106, 0.17)
+<<<<<<< HEAD
 
 @media screen and (max-width: 1179px)
     .price
         &__btn-add
             width: 100%
+=======
+    &.--disabled
+        pointer-events: none !important
+        transform: none
+        box-shadow: none
+        background-color: inherit
+>>>>>>> c25e6206a37c69ba6ec19c403df37aee225d3e74

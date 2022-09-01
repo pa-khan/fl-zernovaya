@@ -14,12 +14,14 @@
         will-change: transform
     &__title
         padding-top: 2px
+        margin-right: 10px
+        line-height: 1
         will-change: transform
     &__icon
         width: 8px
         height: 12px
         fill: #000
-        margin-left: 10px
+        margin-left: auto
         transform: rotate(90deg)
         transition: var(--transition-main)
         background: url('Images/chevron-black.svg') no-repeat center / 100%
@@ -46,7 +48,7 @@
             color: var(--color-white)
             background-color: var(--color-black)
         &:last-child
-            border-radius: 0 0 5px 5px
+            // border-radius: 0 0 5px 5px
     &.--bb
         .select
             &__title

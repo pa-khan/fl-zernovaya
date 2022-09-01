@@ -53,7 +53,8 @@ if ($products.length > 0) {
 
                 if ($product.$incdec) {
                     setTimeout(() => {
-                        $price.$areaValue.innerText = ($price._value * $product.$incdec._value).toLocaleString('ru');
+                        // $price.$areaValue.innerText = ($price._value * $product.$incdec._value).toLocaleString('ru');
+                        $price.$areaValue.innerText = ($price._value).toLocaleString('ru');
                     }, 100);
                 } else {
                     $price.$areaValue.innerText = ($price._value).toLocaleString('ru');
@@ -63,17 +64,17 @@ if ($products.length > 0) {
             $product.$pricesCurrent.classList.add(window._CLASS.current);
 
             if ($product.$incdec) {
-                $product.$incdec.addEventListener('change', () => {
-                    $product.$prices.forEach(($price) => {
-                        if ($product.$incdec._value >= 40) {
-                            $price.classList.add('--sm');
-                        } else {
-                            $price.classList.remove('--sm');
-                        }
+                // $product.$incdec.addEventListener('change', () => {
+                //     $product.$prices.forEach(($price) => {
+                //         if ($product.$incdec._value >= 40) {
+                //             $price.classList.add('--sm');
+                //         } else {
+                //             $price.classList.remove('--sm');
+                //         }
 
-                        $price.$areaValue.innerText = ($price._value * $product.$incdec._value).toLocaleString('ru');
-                    });
-                });
+                //         $price.$areaValue.innerText = ($price._value * $product.$incdec._value).toLocaleString('ru');
+                //     });
+                // });
             }
 
             if ($product.$select) {
