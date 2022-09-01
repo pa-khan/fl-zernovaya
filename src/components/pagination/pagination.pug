@@ -1,14 +1,16 @@
+//- include ../layout/mixins/img
+
 mixin pagination()
     .pagination(class!=attributes.class)
-        .pagination__control.arrow.--prev
-            +img('')
+        .pagination__control.control.--prev.--disabled
+            +img('chevron.svg', 'icon')
         nav.pagination__pages
-            .pagination__page.--current  
-            a.pagination__page(href="") 1
+            .pagination__page.--current 1
             a.pagination__page(href="") 2
             a.pagination__page(href="") 3
             a.pagination__page(href="") 4
             a.pagination__page(href="") 5
             a.pagination__page(href="") 6
-        .pagination__control.arrow.--next
-            +img('')
+        a.pagination__control.control.--next(href="")
+            +img('chevron.svg', 'icon')
+    +style('pagination', 'comp')

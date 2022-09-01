@@ -71,6 +71,26 @@
             .select
                 &__area
                     border-radius: 5px 5px 0 0
+    &.--b-gray
+        .select
+            &__area
+                border: 1px solid #ddd
+                padding-left: 10px
+                padding-right: 10px
+                border-radius: 5px
+                padding-top: 2px
+            &__title
+                border-color: transparent
+            &__drop
+                border-radius: 0 0 5px 5px
+        &.--open
+            .select
+                &__area
+                    border-radius: 5px 5px 0 0
+    &.--xs
+        .select
+            &__title
+                // padding-top: 2px
     &.--open
         z-index: 10
         .select

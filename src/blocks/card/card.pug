@@ -1,7 +1,7 @@
 section.card.case
     .card__wrap
         .card__head
-            .card__title.h1.--hide Индонезия Фринса
+            .card__title.h2.--hide Индонезия Фринса
             .card__btn-favorit.btn
                 +img('heart.svg')
         .card__images
@@ -14,14 +14,14 @@ section.card.case
                     .card__slider-item.swiper-item
                         +img('product-1.png')
             .card__controls
-                .card__control.arrow.--prev.swiper-button-prev
+                .card__control.control.--prev.swiper-button-prev
                     +img('chevron.svg')
                 .card__dots.dots.swiper-pagination
-                .card__control.arrow.--next.swiper-button-next
+                .card__control.control.--next.swiper-button-next
                     +img('chevron.svg')
         .card__content
             .card__head
-                .card__title.h1 #[h1 Индонезия Фринса]
+                .card__title.h2 #[h1 Индонезия Фринса]
                 .card__btn-favorit.btn
                     +img('heart.svg')
             .card__vendor-code Артикул: 084
@@ -43,7 +43,13 @@ section.card.case
                 .card__desc
                     p Цветочный аромат и шелковистое тело отлично дополняет фруктовая кислотность, окрашенная сладостью спелой дыни и оттенками малинового варенья. В завершении Вас ждет нежное послевкусие черешни.
             .card__select.select.--bb
+                select(name="grinding")
+                    option(value="Не молоть" selected="selected") Не молоть
+                    option(value="В зернах") В зернах
             .card__incdec.incdec
+                .incdec__btn.btn.--minus
+                input.incdec__input(type="tel" name="")
+                .incdec__btn.btn.--plus
             .card__price.price
                 .price__list
                     .price__item
@@ -58,4 +64,5 @@ section.card.case
                             .price__discount -40%
                         .price__body
                             .price__value=price_2 + ' ₽'
-            a.product__btn-add.btn.--md.--bg-bg-black(href="javascript:;") В корзину
+            a.card__btn-add.btn.--md.--bg-bg-black(href="javascript:;") В корзину
++script('card', 'blocks')
