@@ -82,6 +82,9 @@
             top: 4px
             background: var(--color-black)
             border-radius: 50%
+    img
+        margin-top: 30px
+        margin-bottom: 30px
     strong, b
         font-weight: 700
     i, em
@@ -97,10 +100,15 @@
         background: #C4C4C4
         transition: var(--transition-main)
         margin-right: 9px
+        cursor: pointer
         &:last-child
             margin-right: 0
+        &:hover
+            background: var(--color-black-light)
         &.swiper-pagination-bullet-active
             width: 18px
+            pointer-events: none
+            cursor: default
             background: var(--color-black)
 
 .control

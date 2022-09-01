@@ -1,7 +1,7 @@
 
 +style('header', 'blocks')
 +style('search', 'blocks')
-header.header
+header.header(class=headerGray ? '--gray' : null)
     .header__mob.case.row
         a.header__logo(href="index.html")
             +img('logo.svg', 'icon')

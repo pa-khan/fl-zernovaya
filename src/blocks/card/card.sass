@@ -1,0 +1,90 @@
+.card
+    --card-slider-width: 540px
+    background: var(--color-white-dark)
+    &__images
+        padding-bottom: 45px
+    &__slider
+        width: var(--card-slider-width)
+        &-item
+            display: flex
+            align-items: center
+            justify-content: center
+    &__controls
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-top: 20px
+    &__dots
+        margin-left: 20px
+        margin-right: 20px
+    &__content
+        width: calc(100% - var(--card-slider-width))
+        padding-left: 40px
+    &__head
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        &.--hide
+            display: none
+    &__title
+        width: calc(100% - 35px)
+    &__btn-favorit
+        position: relative
+        margin-left: auto
+        z-index: 5
+        right: 25px
+        width: 24px
+        transition: var(--transition-main)
+        svg
+            position: relative
+            &:nth-of-type(2)
+                position: absolute
+                top: 2px
+                left: 0
+                transition: var(--transition-main)
+                transform: scale(0)
+    &__vendor-code
+        color: var(--color-gray)
+        margin-bottom: 30px
+    &__data
+        display: flex
+        margin-left: -10px
+        margin-right: -10px
+        &-col
+            min-width: calc(50% - 20px)
+            width: 100%
+            margin: 0 10px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            > *
+                width: 100%
+            *:last-child
+                margin-bottom: 0
+    &__stats
+        margin-bottom: 30px
+    &__settings
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        margin-bottom: 50px
+    &__incdec
+        margin-left: auto
+    &__price
+        margin-bottom: 20px
+    &__btn-add
+        &.btn
+            width: auto
+            padding-left: 38px
+            padding-right: 38px
+    &__desc
+        font-size: 14px
+        line-height: 1.5
+    &.--favorit
+        .card
+            &__btn-favorit
+                svg
+                    &:nth-of-type(1)
+                        transform: scale(0)
+                    &:nth-of-type(2)
+                        transform: scale(1)

@@ -3,7 +3,7 @@ include ../product/product
 +style('favs', 'blocks')
 +style('product', 'blocks')
 if favs
-    section.favs.case
+    section.favs.case(class=favsClass)
         each fav in favs
             .favs__block
                 .favs__head.row

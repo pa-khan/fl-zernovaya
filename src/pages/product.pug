@@ -1,6 +1,7 @@
 extends ../layout/template
 block vars
     -
+        headerGray = true
         title = "Карточка товара"
         breadcrumbs = [
             ['Главная', 'index.html'],
@@ -32,4 +33,8 @@ block content
                 ]
             },
         ]
-    //- include ../blocks/favs/favs
+        favsClass = '--pt0 --pb'
+    include ../blocks/favs/favs
+
+    +script('favs', 'blocks')
+    +script('product', 'blocks')
