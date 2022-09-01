@@ -1,6 +1,9 @@
 extends ../layout/template
 block vars
     -
+        headerGray = true
+        footerWhite = true
+        footerSubHide = true
         title = "Корзина"
         breadcrumbs = [
             ['Главная', 'index.html'],
@@ -9,5 +12,6 @@ block vars
 block content
     include ../components/breadcrumb/breadcrumb
     +breadcrumb
+    +style('breadcrumb', 'comp')
 
     include ../blocks/cart/cart

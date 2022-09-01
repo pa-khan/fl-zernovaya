@@ -1,19 +1,20 @@
 +style('footer', 'blocks')
 +style('sub', 'blocks')
-footer.footer
-    .footer__top.case
-        .footer__sub.sub
-            .sub__content
-                .sub__title.h2 Подпишитесь на нас
-                .sub__text Здесь мы рассказываем о том, что у нас происходит каждый день. О людях, процессах, событиях и новых сортах кофе.
-            form.sub__form
-                .sub__field.field.--bg-white
-                    .field__wrap
-                        .field__icon
-                            +img('envelope.svg')
-                        .field__placeholder Emaill
-                        input.field__area(type="text" name="email")
-                button.sub__btn.btn.--md.--bg-black.--round Подписаться
+footer.footer(class=footerWhite = '--white' : null)
+    if !footerSubHide
+        .footer__top.case
+            .footer__sub.sub
+                .sub__content
+                    .sub__title.h2 Подпишитесь на нас
+                    .sub__text Здесь мы рассказываем о том, что у нас происходит каждый день. О людях, процессах, событиях и новых сортах кофе.
+                form.sub__form
+                    .sub__field.field.--bg-white
+                        .field__wrap
+                            .field__icon
+                                +img('envelope.svg')
+                            .field__placeholder Emaill
+                            input.field__area(type="text" name="email")
+                    button.sub__btn.btn.--md.--bg-black.--round Подписаться
     .footer__body.case.row
         .footer__info
             a.footer__logo

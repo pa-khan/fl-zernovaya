@@ -1,7 +1,7 @@
 
 +style('header', 'blocks')
 +style('search', 'blocks')
-header.header
+header.header(class=headerGray ? '--gray' : null)
     .header__mob.case.row
         a.header__logo(href="index.html")
             +img('logo.svg', 'icon')
@@ -40,6 +40,7 @@ header.header
                 .btn__icon
                     +img('magniffic-glass.svg', 'icon')
                 .btn__text Поиск
+        //- a.header__btn.header__btn-cart.btn(href="cart.html")
         .header__btn.header__btn-cart.btn
             .btn__icon
                 +img('cart.svg')

@@ -14,12 +14,16 @@ export default class Field {
 
         this.element.$area.addEventListener('focusout', () => {
             this.element.classList.remove(window._CLASS.focus);
+
+            if (this.element.$area.value == '') {
+                this.element.classList.remove(window._CLASS.filled);
+            }
         });
 
         this.element.$area.addEventListener('input', () => {
             this.element._value = this.element.$area;
 
-            if (this.element.$area != '') {
+            if (this.element.$area.value != '') {
                 this.element.classList.add(window._CLASS.filled);
             }
         });

@@ -1,6 +1,6 @@
 mixin breadcrumb()
 	if (breadcrumbs)
-		.breadcrumb.case
+		.breadcrumb.case(class=headerGray ? '--gray' : null)
 			.breadcrumb__list(itemscope itemtype="http://schema.org/BreadcrumbList")
 				- var position = 1
 				each item in breadcrumbs
