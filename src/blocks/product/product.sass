@@ -123,7 +123,51 @@
         box-shadow: none
         background-color: inherit
 
-@media screen and (max-width: 1179px)
-    .price
-        &__btn-add
-            width: 100%
+@media screen and (max-width: 767px)
+    .product
+        padding: 15px 10px 20px
+        &__img
+            height: 180px
+            margin-top: -10px
+            margin-bottom: 16px
+        &__btn-favorit
+            top: 21px
+            right: 21px
+        &__name
+            margin-bottom: 15px
+        &__vendor-code
+            font-size: 14px
+            display: none
+        &__text
+            font-size: 12px
+            margin-bottom: 15px
+        &__select
+            min-width: 180px
+            margin-right: 20px
+            .select
+                &__area
+                    border: 1px solid var(--color-black)
+                    padding-left: 34px
+                    padding-right: 34px
+                    border-radius: 5px
+                    padding-top: 0
+                &__title
+                    border-color: transparent !important
+                &__item
+                    text-align: center
+            &.--b-black
+                .select
+                    &__area
+                        padding-left: 34px
+                        padding-right: 34px
+        &__incdec
+            .incdec
+                &__input
+                    width: 84px
+        &__btns
+            margin-top: 30px
+
+        &:hover
+            transform: none
+            background-color: var(--color-gray-light)
+            box-shadow: none

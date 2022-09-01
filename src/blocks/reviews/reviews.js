@@ -12,6 +12,7 @@ if ($reviewsBlocks) {
             new Swiper($reviews.$slider, {
                 slidesPerView: 2,
                 spaceBetween: 20,
+                speed: 900,
                 navigation: {
                     prevEl: $reviews.$controlPrev,
                     nextEl: $reviews.$controlNext
@@ -19,6 +20,14 @@ if ($reviewsBlocks) {
                 pagination: {
                     el: $reviews.$dots,
                     clickable: true,
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
                 },
                 modules: [Navigation, Pagination]
             });

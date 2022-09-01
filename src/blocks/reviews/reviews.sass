@@ -34,3 +34,26 @@
         color: var(--color-gray)
         font-size: 14px
         line-height: 1.8
+
+@media screen and (max-width: 767px)
+    .reviews
+        padding-top: 100px
+        padding-bottom: 160px
+        &__item
+            padding: 24px 20px 26px
+            background: #fff
+        &__text
+            line-height: 1.85
+        &__dots
+            display: flex
+        &__controls
+            width: 100%
+            left: 50%
+            bottom: 100px
+            transform: translateX(-50%)
+            position: absolute
+            align-items: center
+            justify-content: center
+        &__control
+            &.--next
+                margin-left: 14px

@@ -28,3 +28,22 @@
         &.swiper-slide-active, &.swiper-slide-active + &.swiper-slide-next, &.swiper-slide-next + &.swiper-slide
             opacity: 1
             pointer-events: auto
+
+@media screen and (max-width: 767px)
+    .favs
+        &__block
+            padding-bottom: 60px
+            position: relative
+        &__dots
+            display: flex
+        &__controls
+            width: 100%
+            left: 50%
+            bottom: 0
+            transform: translateX(-50%)
+            position: absolute
+            align-items: center
+            justify-content: center
+        &__control
+            &.--next
+                margin-left: 14px
