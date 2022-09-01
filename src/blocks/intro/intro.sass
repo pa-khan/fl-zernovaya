@@ -1,7 +1,8 @@
 .intro
-    --intro-img-wrap: 600px
-    margin-bottom: 55px
+    --intro-img-wrap: 542px
+    margin-bottom: 57px
     &__item
+        padding-top: 105px
         display: flex
         align-items: center
         &.swiper-slide-active
@@ -14,12 +15,13 @@
         justify-content: center
         position: relative
         width: var(--intro-img-wrap)
-        height: 600px
+        height: 530px
+        margin-left: -15px
     &__price
         position: absolute
-        top: 70px
-        right: 0
-        padding: 4px 11px 2px
+        top: 24px
+        right: -24px
+        padding: 6px 11px
         font-weight: 700
         color: var(--color-white)
         background: var(--color-black)
@@ -27,7 +29,8 @@
     &__content
         opacity: 0
         width: calc(100% - var(--intro-img-wrap))
-        padding-left: 20px
+        margin-top: -35px
+        padding-left: 53px
         transition: .5s
         // transition-delay: .1s
         *:last-child
@@ -51,7 +54,7 @@
         padding-left: 120px
         padding-right: 120px
         padding-bottom: 45px
-        margin-top: -30px
+        margin-top: -10px
     &__values
         position: absolute
         top: 0
@@ -72,8 +75,9 @@
         display: flex
         align-items: center
         justify-content: center
-        // margin-left: auto
-        // margin-right: auto
+    &__control
+        width: 30px
+        height: 30px
     &__dots
         margin-left: 20px
         margin-right: 20px
@@ -87,9 +91,25 @@
         &.--middle
             left: 50%
             top: 50%
-            margin-top: -20px
-            margin-left: -40px
+            margin-top: -10px
+            margin-left: -80px
             transform: translate(-50%, -50%)
         &.--right
             bottom: -61px
             right: 0
+
+@media screen and (max-width: 1179px)
+    .intro
+        --intro-img-wrap: 450px
+        &__item
+            padding-top: 90px
+        &__img-wrap
+            height: 420px
+        &__price
+            top: 0
+            right: 0
+        &__content
+            padding-left: 30px
+        &__nav
+            margin-top: 0
+            padding-bottom: 70px

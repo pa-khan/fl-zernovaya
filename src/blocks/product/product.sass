@@ -1,9 +1,9 @@
 .product
     position: relative
     border-radius: 10px
-    padding: 20px 18px 30px
+    padding: 15px 18px 30px
     background-color: var(--color-gray-light)
-    
+
     &__btn-favorit
         z-index: 5
         position: absolute
@@ -24,8 +24,8 @@
         align-items: center
         justify-content: center
         flex-direction: column
-        height: 220px
-        margin-bottom: 25px
+        height: 250px
+        margin-bottom: 10px
     &__name
         margin-bottom: 10px
         will-change: transform
@@ -49,7 +49,7 @@
         margin-bottom: 20px
         will-change: transform
     &__stats
-        margin-bottom: 20px
+        margin-bottom: 15px
         will-change: transform
     &__select
         margin-right: auto
@@ -69,7 +69,7 @@
         z-index: 2
         position: relative
         border-top: 1px dashed #EDEDED
-        padding-top: 20px
+        padding-top: 13px
         will-change: transform
     &__btns
         z-index: 2
@@ -77,6 +77,7 @@
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 10px
+        margin-top: 15px
         will-change: transform
     &__btn-add
         width: 100%
@@ -93,3 +94,8 @@
         transform: scale(1.02)
         background-color: var(--color-white)
         box-shadow: 0px 4px 20px rgba(106, 106, 106, 0.17)
+
+@media screen and (max-width: 1179px)
+    .price
+        &__btn-add
+            width: 100%
