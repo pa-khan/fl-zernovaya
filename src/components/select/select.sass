@@ -11,8 +11,10 @@
         align-items: center
         height: 37px
         transition: var(--transition-main)
+        will-change: transform
     &__title
         padding-top: 2px
+        will-change: transform
     &__icon
         width: 8px
         height: 12px
@@ -63,6 +65,10 @@
                 border-color: transparent
             &__drop
                 border-radius: 0 0 5px 5px
+        &.--open
+            .select
+                &__area
+                    border-radius: 5px 5px 0 0
     &.--open
         z-index: 10
         .select
