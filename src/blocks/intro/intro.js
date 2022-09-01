@@ -24,6 +24,7 @@ if ($intro) {
 
     document.addEventListener('DOMContentLoaded', () => {
         new Swiper($intro.$slider, {
+            speed: 900,
             navigation: {
                 prevEl: $intro.$controlPrev,
                 nextEl: $intro.$controlNext

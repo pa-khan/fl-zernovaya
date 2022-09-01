@@ -17,6 +17,7 @@ if ($favsBlocks) {
                 new Swiper($fav.$slider, {
                     slidesPerView: 3,
                     spaceBetween: 20,
+                    speed: 900,
                     navigation: {
                         prevEl: $fav.$controlPrev,
                         nextEl: $fav.$controlNext
@@ -24,6 +25,17 @@ if ($favsBlocks) {
                     pagination: {
                         el: $fav.$dots,
                         clickable: true,
+                    },
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                        },
                     },
                     modules: [Navigation, Pagination]
                 });
