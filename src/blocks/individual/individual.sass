@@ -1,17 +1,51 @@
 .individual
-    // padding-top: 100px
+    padding-bottom: 55px
     &__content
         width: 100%
         max-width: 555px
-        padding-top: 70px
+        padding-top: 60px
+        p
+            font-size: 16px
     &__img
         border-radius: 0px 0px 0px 306.5px
         overflow: hidden
         width: 615px
-        margin-top: -100px
+        margin-top: -122px
         margin-left: auto
-        margin-right: -160px
+        margin-right: -152px
         picture, img
             width: 100%
             height: 100%
             max-width: none !important
+
+@media screen and (max-width: 1179px)
+    .individual
+        &__content
+            max-width: 455px
+
+@media screen and (max-width: 991px)
+    .individual
+        padding-top: 65px
+        &__content
+            max-width: 100%
+            margin-bottom: 30px
+            padding-top: 0
+        &__img
+            width: 100%
+            height: 550px
+            border-radius: 0
+            margin-top: 0
+            margin-right: auto
+            img
+                object-fit: cover
+
+@media screen and (max-width: 767px)
+    .individual
+        padding-bottom: 0
+        &__content
+            h2
+                font-size: 26px
+                font-weight: 700
+                max-width: 370px
+        &__img
+            height: 395px

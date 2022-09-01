@@ -3,9 +3,10 @@
     position: relative
     padding-top: 150px
     padding-bottom: 180px
+    margin-top: -47px
     color: var(--color-white)
     &__title
-        margin-bottom: 50px
+        margin-bottom: 40px
     &__list
         display: grid
         grid-template-columns: repeat(4, 1fr)
@@ -15,22 +16,30 @@
         border: 1px solid #787878
         border-radius: 5px
         padding: 20px
+        display: flex
+        flex-direction: column
         &-icon
             display: flex
             align-items: center
-            // justify-content: center
             width: 81px
             height: 81px
-            margin-bottom: 33px
+            margin-bottom: 18px
         &-name
             font-size: 22px
             line-height: 1.6
             font-weight: 700
+            margin-top: 22px
         &-text
             font-size: 22px
             line-height: 1.6
             font-weight: 500
             max-width: 200px
+        &:nth-of-type(1)
+            .steps
+                &__item
+                    &-name
+                        margin-top: 0
+
     &__bg
         z-index: -1
         position: absolute
@@ -41,4 +50,53 @@
         picture, img
             width: 100%
             height: 100%
-            // object-fit: cover
+
+@media screen and (max-width: 1179px)
+    .steps
+        margin-top: 0
+        &__item
+            &-text
+                font-size: 20px
+
+@media screen and (max-width: 991px)
+    .steps
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+        &__item
+            &-name
+                margin-top: 0
+            &-text
+                max-width: 100%
+                min-height: 64px
+
+@media screen and (max-width: 767px)
+    .steps
+        &__title
+            margin-bottom: 42px
+        &__item
+            padding: 20px 8px 20px 17px
+            &-name
+                font-size: 18px
+            &-text
+                font-size: 18px
+            &:nth-of-type(3), &:nth-of-type(4)
+                padding: 20px 8px 12px 17px
+                .steps
+                    &__item
+                        &-name
+                            margin-top: 20px
+
+@media screen and (max-width: 410px)
+    .steps
+        &__list
+            grid-template-columns: 1fr
+        &__item
+            &-text
+                min-height: auto
+                br
+                    display: none
+            &:nth-of-type(3), &:nth-of-type(4)
+                .steps
+                    &__item
+                        &-name
+                            margin-top: 0
