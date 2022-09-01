@@ -43,3 +43,59 @@
                 max-height: none
             img
                 object-fit: cover
+
+@media screen and (max-width: 991px)
+    .about
+        padding-top: 80px
+        padding-bottom: 40px
+        &__item
+            margin: 0 0 62px
+            flex-direction: column
+            &:last-of-type
+                margin: 0
+            &:nth-of-type(odd)
+                .about
+                    &__img
+                        &.--lg
+                            height: 550px
+                            picture
+                                left: 0
+                                right: 0
+                                width: 100%
+                                position: relative
+            &:nth-of-type(2n)
+                .about
+                    &__text
+                        order: 1
+                    &__img
+                        order: 2
+
+        &__text, &__img
+            width: 100%
+            padding-left: 0
+            padding-right: 0
+        &__text
+            margin-bottom: 30px
+        &__img
+            display: flex
+            justify-content: center
+
+@media screen and (max-width: 767px)
+    .about
+        padding-bottom: 0
+        &__title
+            font-size: 30px
+            margin-bottom: 20px
+        &__item
+            &:nth-of-type(odd)
+                .about
+                    &__img
+                        &.--lg
+                            height: 390px
+        &__text
+            font-size: 14px
+
+@media screen and (max-width: 410px)
+    .about
+        &__img
+            height: 300px

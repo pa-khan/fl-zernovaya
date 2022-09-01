@@ -40,3 +40,31 @@
     &__btn
         border-radius: 10px
         padding: 2px 20px 0
+
+@media screen and (max-width: 991px)
+    .job
+        &__list
+            grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 767px)
+    .job
+        &__text
+            .ul
+                &.--pl
+                    padding-left: 0
+            .h2
+                margin-top: 75px
+            .h4
+                &.--pl
+                    font-size: 20px
+                    padding-left: 0
+            h4
+                br
+                    display: none
+        &__list
+            gap: 24px
+            grid-gap: 24px
+            margin-top: 40px
+            grid-template-columns: 1fr
+        &__item
+            padding: 20px
