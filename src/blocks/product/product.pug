@@ -52,8 +52,10 @@ mixin product(img = 'product-1.png', name = 'Эфиопия Акация', vendo
                     a.price__btn-add.btn.--md.--bg-black.--round(href="javascript:;") В корзину
         if stats
             .product__btns
-                a.product__btn-add.btn.--md.--bg-black.--round(href="javascript:;") В корзину
-                a.product__btn-more.btn.--md.--b-black.--round(href="product.html") Подробнее
+                a.product__btn-add.btn.--md.--bg-black.--round(href="javascript:;") 
+                    .btn__text В корзину
+                a.product__btn-more.btn.--md.--b-black.--round(href="product.html") 
+                    .btn__text Подробнее
 
         if attributes.disabled
             .product__out-stock
