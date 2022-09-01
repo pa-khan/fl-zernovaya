@@ -139,3 +139,47 @@
             &.--middle
                 margin-top: 100px
                 margin-left: 230px
+
+@media screen and (max-width: 767px)
+    .intro
+        --intro-img-wrap: 340px
+        margin-bottom: 60px
+        &__item
+            padding-top: 90px
+        &__content
+            width: 100%
+            margin-bottom: 10px
+        &__title
+            margin-right: 0
+        &__text
+            margin-bottom: 20px
+        &__img-wrap
+            height: 350px
+        &__price
+            right: -30px
+        &__nav
+            margin-top: -10px
+            padding-left: 40px
+            padding-right: 40px
+            padding-bottom: 40px
+        &__leave
+            &.--left
+                top: -175px
+                left: -60px
+            &.--middle
+                width: 100%
+                margin-top: 110px
+                margin-left: 250px
+            &.--right
+                display: none
+
+@media screen and (max-width: 410px)
+    .intro
+        --intro-img-wrap: 290px
+        &__text
+            font-size: 18px
+        &__img-wrap
+            height: 300px
+        &__leave
+            &.--middle
+                margin-left: 200px
