@@ -1,0 +1,39 @@
+.sub
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    &__content
+        width: 100%
+        max-width: 585px
+    &__title
+        margin-bottom: 10px
+    &__text
+        font-size: 18px
+        line-height: 32px
+    &__form
+        position: relative
+        max-width: 430px
+        margin-left: 90px
+    &__field
+        width: 100%
+        .field
+            &__icon
+                position: absolute
+                top: 50%
+                left: 20px
+                transform: translateY(-50%)
+                pointer-events: none
+            &__placeholder
+                color: #959EAD
+            &__placeholder, &__area
+                padding-left: 48px
+                padding-right: 200px
+            &__area
+                height: 55px
+                border-radius: 50px
+    &__btn
+        position: absolute
+        top: 50%
+        right: 5px
+        margin-top: -22.5px
+        min-width: 180px

@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "Что такое одноствольная система выращивания кофе и почему она становится популярной?"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            ['Блог', 'blog.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    include ../blocks/article/article

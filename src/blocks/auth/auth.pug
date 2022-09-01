@@ -1,0 +1,106 @@
+.auth
+    .auth__wrap
+        .auth__img-wrap
+            .auth__img
+                +img('auth.jpg')
+        .auth__content
+            .auth__head
+                .auth__logo
+                    +img('logo.svg')
+                .auth__close
+            .auth__body
+                .auth__tab.--type-login
+                    .auth__title Вход в личный кабинет
+                    .auth__subtitle Выберите вариант пользователя
+                    .auth__types
+                        .auth__type
+                            .auth__type-icon
+                                +img('user.svg')
+                            .auth__type-inner
+                                .auth__type-title Розничный клиент
+                                .auth__type-desc Вход для розничных клиетов
+                        .auth__type
+                            .auth__type-icon
+                                +img('user.svg')
+                            .auth__type-inner
+                                .auth__type-title Оптовый клиент
+                                .auth__type-desc Вход для оптовых клиетов
+                    .auth__link Нет учетной записи? #[a(href="javascript:;") Зарегистрироваться]
+                .auth__tab.--login
+                    .auth__title Вход
+                    .auth__subtitle Введите данные пользователя
+                    .auth__form
+                        .auth__field.field.--md.--b-gray.--email.--required
+                            .field__wrap
+                                .field__placeholder E-mail
+                                input.field__area(type="text" name="user_name")
+                        .auth__field.field.--md.--b-gray.--password.--required
+                            .field__wrap
+                                .field__placeholder Пароль
+                                input.field__area(type="password" name="password")
+                        button.auth__btn.btn.--md.--bg-black Войти
+                    .auth__link Забыли пароль? #[a(href="") Восстановить пароль]
+
+                .auth__tab.--reset
+                    .auth__title Восстановить пароль
+                    .auth__subtitle Введите e-mail мы отправим на него письмо для восстановления пароля
+                    .auth__subtitle Введите новый пароль
+                    .auth__form
+                        .auth__field.field.--md.--b-gray.--email.--required
+                            .field__wrap
+                                .field__placeholder E-mail
+                                input.field__area(type="text" name="user_name")
+                        .auth__field.field.--md.--b-gray.--password.--required
+                            .field__wrap
+                                .field__placeholder Пароль
+                                input.field__area(type="password" name="password")
+                        button.auth__btn.btn.--md.--bg-black Восстановить пароль
+                        button.auth__btn.btn.--md.--bg-black Сохранить пароль
+                    .auth__link #[a(href="javascript:;") Вернуться назад]
+                    .auth__link #[a(href="javascript:;") Вернуться назад]
+
+                .auth__tab.--type-reg
+                    .auth__title Регистрация
+                    .auth__subtitle Выберите вариант пользователя
+                    .auth__types
+                        .auth__type
+                            .auth__type-icon
+                                +img('user.svg')
+                            .auth__type-inner
+                                .auth__type-title Розничный клиент
+                                .auth__type-desc Вход для розничных клиетов
+                        .auth__type
+                            .auth__type-icon
+                                +img('user.svg')
+                            .auth__type-inner
+                                .auth__type-title Оптовый клиент
+                                .auth__type-desc Вход для оптовых клиетов
+                    .auth__link Уже есть учетная запись? #[a(href="javascript:;") Войти]
+
+                .auth__tab.--reg
+                    .auth__title Регистрация
+                    .auth__subtitle Введите данные пользователя
+                    .auth__form
+                        .auth__field.field.--md.--b-gray.--name.--required
+                            .field__wrap
+                                .field__placeholder Имя и фамилия
+                                input.field__area(type="text" name="name")
+                        .auth__field.field.--md.--b-gray.--phone.--required
+                            .field__wrap
+                                .field__placeholder Телефон
+                                input.field__area(type="tel" name="phone")
+                        .auth__field.field.--md.--b-gray.--email.--required
+                            .field__wrap
+                                .field__placeholder E-mail
+                                input.field__area(type="email" name="email")
+                        .auth__field.field.--md.--b-gray.--password.--required
+                            .field__wrap
+                                .field__placeholder Пароль
+                                input.field__area(type="password" name="password")
+                        button.auth__btn.btn.--md.--bg-black Создать учетную запись
+                    .auth__link Уже есть учетная запись? #[a(href="javascript:;") Войти]
+
+                .auth__tab.--reg-thanks
+                    .auth__title Регистрация прошла успешно!
+                    a.auth__btn.btn.--md.--bg-black(href="pa.html") Войти в личный кабинет
++style('auth', 'blocks')

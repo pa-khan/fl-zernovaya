@@ -1,0 +1,13 @@
+extends ../layout/template
+block vars
+    -
+        title = "Блог"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    include ../blocks/blog/blog

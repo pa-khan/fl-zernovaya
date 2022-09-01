@@ -1,0 +1,71 @@
+.btn
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: var(--fz-main)
+    font-family: var(--ff-main)
+    background-color: transparent
+    transition: var(--transition-main)
+    outline: none
+    appearance: none
+    border: none
+    cursor: pointer
+    &__text
+        transition: var(--transition-main)
+    &.--inline
+        display: inline-flex
+    &.--round
+        border-radius: 100px
+    &.--bg-black
+        color: var(--color-white)
+        background: var(--color-black)
+        border: 1px solid var(--color-black)
+        &:hover
+            color: var(--color-black)
+            background: var(--color-white)
+            .btn
+                &__icon
+                    path, rect
+                        &[fill]
+                            fill: var(--color-black)
+                        &[stroke]
+                            stroke: var(--color-black)
+                &__text
+                    color: var(--color-black)
+    &.--b-black
+        color: var(--color-black)
+        border: 1px solid var(--color-black)
+        &:hover
+            color: var(--color-white)
+            background: var(--color-black)
+            .btn
+                &__icon
+                    path, rect
+                        &[fill]
+                            fill: var(--color-white)
+                        &[stroke]
+                            stroke: var(--color-white)
+                &__text
+                    color: var(--color-white)
+    &.--xs
+        height: 35px
+        .btn__icon + .btn__text
+            margin-left: 10px
+        .btn__text + .btn__icon
+            margin-left: 10px
+        .btn__text
+            padding-top: 2px
+    &.--md
+        height: 45px
+    &.--lg
+        height: 60px
+        padding-left: 20px
+        padding-right: 20px
+        .btn
+            &__text
+                padding-top: 2px
+                font-weight: 500
+    &:active
+        transform: scale(0.95) translate3d(0, 0, 0)

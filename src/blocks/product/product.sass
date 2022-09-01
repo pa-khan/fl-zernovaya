@@ -1,0 +1,81 @@
+.product
+    position: relative
+    border-radius: 10px
+    padding: 20px 18px 30px
+    background-color: var(--color-gray-light)
+    &__btn-favorit
+        z-index: 5
+        position: absolute
+        top: 25px
+        right: 25px
+        width: 24px
+        transition: var(--transition-main)
+        svg
+            position: relative
+            &:nth-of-type(2)
+                position: absolute
+                top: 2px
+                left: 0
+                transition: var(--transition-main)
+                transform: scale(0)
+    &__img
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        height: 220px
+        margin-bottom: 25px
+    &__name
+        margin-bottom: 10px
+        a
+            &::before
+                z-index: 1
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+    &__vendor-code
+        line-height: 1.5
+        color: var(--color-gray)
+        margin-bottom: 20px
+    &__text
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 20px
+    &__stats
+        margin-bottom: 20px
+    &__select
+        margin-right: auto
+    &__controls
+        z-index: 3
+        position: relative
+        align-items: center
+        margin-bottom: 20px
+    &__price
+        z-index: 2
+        position: relative
+        border-top: 1px dashed #EDEDED
+        padding-top: 20px
+    &__btns
+        z-index: 2
+        position: relative
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 10px
+    &__btn-add
+        width: 100%
+    &.--favorit
+        .product
+            &__btn-favorit
+                svg
+                    &:nth-of-type(1)
+                        transform: scale(0)
+                    &:nth-of-type(2)
+                        transform: scale(1)
+
+    &:hover
+        transform: scale(1.02)
+        background-color: var(--color-white)
+        box-shadow: 0px 4px 20px rgba(106, 106, 106, 0.17)

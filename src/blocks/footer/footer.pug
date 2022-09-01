@@ -1,2 +1,53 @@
++style('footer', 'blocks')
++style('sub', 'blocks')
 footer.footer
-    +style('footer', 'blocks')
+    .footer__top.case
+        .footer__sub.sub
+            .sub__content
+                .sub__title.h2 Подпишитесь на нас
+                .sub__text Здесь мы рассказываем о том, что у нас происходит каждый день. О людях, процессах, событиях и новых сортах кофе.
+            form.sub__form
+                .sub__field.field.--bg-white
+                    .field__wrap
+                        .field__icon
+                            +img('envelope.svg')
+                        .field__placeholder Emaill
+                        input.field__area(type="text" name="email")
+                button.sub__btn.btn.--md.--bg-black.--round Подписаться
+    .footer__body.case.row
+        .footer__info
+            a.footer__logo
+                +img('logo.svg', 'icon')
+            .footer__copy Все права защищены.
+            .footer__link #[a(href="") Политика конфиденциальности]
+        nav.footer__nav.row
+            .footer__nav-item
+                a.footer__nav-link(href="") Каталог товаров 
+            .footer__nav-item
+                a.footer__nav-link(href="") Доставка и оплата
+            .footer__nav-item
+                a.footer__nav-link(href="") Оптовые предложения
+            .footer__nav-item
+                a.footer__nav-link(href="") Блог
+            .footer__nav-item
+                a.footer__nav-link(href="") О нас
+            .footer__nav-item
+                a.footer__nav-link(href="") Контакты
+        .footer__contacts
+            .footer__feedback.row
+                .footer__socials
+                    .footer__socials-list.row
+                        a.footer__socials-item(href="" target="_blank")
+                            +img('youtube.svg')
+                        a.footer__socials-item(href="" target="_blank")
+                            +img('facebook.svg')
+                .footer__phone #[a(href="tel:+79780000000") +7 (978) 000 00 00]
+
+            .footer__callback #[a(href="" data-fancybox="" data-src="#modal-callback") Заказать звонок]
+
+            .footer__pays.row
+                .footer__pay
+                    +img('visa.png')
+                .footer__pay
+                    +img('matercard.png')
+

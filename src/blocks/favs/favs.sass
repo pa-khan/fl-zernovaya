@@ -1,0 +1,23 @@
+.favs
+    &__block
+        padding-top: 45px
+        padding-bottom: 45px
+    &__head
+        align-items: center
+        margin-bottom: 30px
+    &__controls
+        margin-left: auto
+    &__control
+        &.--prev
+            margin-right: 14px
+    &__dots
+        display: none
+    &__slider
+        overflow: visible
+    &__item
+        opacity: 0.5
+        transition: .3s
+        pointer-events: none
+        &.swiper-slide-active, &.swiper-slide-active + &.swiper-slide-next, &.swiper-slide-next + &.swiper-slide
+            opacity: 1
+            pointer-events: auto

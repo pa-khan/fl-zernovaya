@@ -1,0 +1,34 @@
+extends ../layout/template
+block vars
+    -
+        title = "Карточка товара"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            ['Каталог', 'catalog.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    include ../blocks/card/card
+
+    include ../blocks/desc/desc
+
+    include ../blocks/work/work
+
+    -
+        favs = [
+            {
+                title: 'Вы смотрели',
+                list: [
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                ]
+            },
+        ]
+    include ../blocks/favs/favs

@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "Избранные товары"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    - paFavorit = true
+    include ../blocks/pa/pa

@@ -1,0 +1,44 @@
+-
+    advantages = [
+        {
+            icon: 'truck.svg',
+            name: 'Доставляем бесплатно',
+            text: 'Мы сделали возможность бесплатной доставки, что бы кофе было еще приятней заказывать. Условия рассчитываются сразу в корзине от 1500 рублей.'
+        },
+        {
+            icon: 'fire.svg',
+            name: 'Обжарка на профессиональном оборудовании',
+            text: 'Жарим кофе на ростере Probatone, а для экспериментов используем лабораторный ростер IKAWA.'
+        },
+        {
+            icon: 'pay.svg',
+            name: 'Интересные статьи',
+            text: 'Запустили блог о кофе и околокофейной индустрии, где вы сможете найти ответы на вопросы о продукте.'
+        },
+        {
+            icon: 'gift.svg',
+            name: 'Ваши бонусы',
+            text: 'С каждого заказа у вас копятся баллы (10% от чека), которые вы можете потратить до 100% на любой кофе из нашего магазина.'
+        },
+        {
+            icon: 'team.svg',
+            name: 'Команда',
+            text: 'В нашей команде участники и призеры чемпионатов, сертифицированные специалисты кофейной индустрии.'
+        }
+    ]
+.advantages.case
+    if advantages
+        .advantages__list
+            - index = 0
+            each item in advantages
+                .advantages__item(class=index <= 1 ? '--lg' : null)
+                    .advantages__head
+                        .advantages__icon
+                            +img(item.icon)
+                        .advantages__name.h3 #[h3=item.name]
+                    .advantages__body
+                        .advantages__text=item.text
+                - index++
+    .advantages__bg
+        +img('advantages-bg.png')
++style('advantages', 'blocks')

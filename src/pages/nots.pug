@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "Уведомления"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    - paNots = true
+    include ../blocks/pa/pa

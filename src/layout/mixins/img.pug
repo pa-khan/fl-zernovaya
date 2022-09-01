@@ -1,3 +1,7 @@
 mixin img(fileName, name)
-    picture(class!=attributes.class)
-        img(src=require('Images/' + fileName) alt=name ? name : '' title=name ? name : '')
+    if fileName
+        if name != 'icon'
+            picture(class!=attributes.class)
+                img(src=require('Images/' + fileName) alt=name ? name : '' title=name ? name : '')
+        else
+            img(src=require('Images/' + fileName))

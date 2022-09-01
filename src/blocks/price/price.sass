@@ -1,0 +1,47 @@
+.price
+    &__list
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__item
+        opacity: 0.4
+        margin-right: 20px
+        transition: var(--transition-main)
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &.--sm
+            .price
+                &__value
+                    font-size: 24px
+        &.--current
+            opacity: 1
+            cursor: default
+            pointer-events: none
+    &__head
+        display: flex
+        line-height: 1.5
+    &__weight
+        margin-right: 14px
+    &__discount
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        border-radius: 2px
+        color: var(--color-white)
+        font-size: 12px
+        line-height: 12px
+        padding: 2px 7px 0
+        height: 20px
+        background-color: var(--color-black)
+    &__body
+        padding-top: 4px
+    &__value
+        font-size: 26px
+        line-height: 1.5
+        font-weight: 500
+        min-height: 40px
+    &__btn-add
+        min-width: 180px
+        margin-left: auto

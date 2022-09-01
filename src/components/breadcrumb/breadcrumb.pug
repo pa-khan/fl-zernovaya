@@ -1,0 +1,15 @@
+mixin breadcrumb()
+	if (breadcrumb)
+		.breadcrumb.case
+			.breadcrumb__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+				- var position = 1
+				each item in breadcrumb
+					.breadcrumb__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+						if item[1] != undefinded
+							a.breadcrumb__link(href=item[1] itemprop="item")
+								span.breadcrumb__name(itemprop="name")= item[0]
+						else
+							.breadcrumb__text(itemprop="item")
+								span.breadcrumb__name(itemprop="name")= item[0]
+						meta(itemprop="position" content=position)
+					- position++

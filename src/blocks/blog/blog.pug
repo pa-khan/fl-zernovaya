@@ -1,0 +1,43 @@
+include ../../components/pagination/pagination
+
+section.blog.case
+    .blog__title.h2 #[h1 Блог]
+    .blog__list
+        mixin blogItem(img = '')
+            article.blog__item.bg-wrap(class!=attributes.class)
+                .blog__inner
+                    .blog__data
+                        .blog__data-item
+                            .blog__data-icon
+                                +img('calendar.svg')
+                            .blog__data-value 31 мая 2022
+                        .blog__data-item
+                            .blog__data-icon
+                                +img('clock.svg')
+                            .blog__data-value 10 мин. на чтение
+                        .blog__data-item
+                            .blog__data-icon
+                                +img('eye.svg')
+                            .blog__data-value 158 просмотров
+                    .blog__content
+                        .blog__name #[a(href="article.html") Что такое одноствольная система выращивания кофе и почему она становится популярной?]
+                        .blog__desc Одноствольная система выращивания кофе может изменить рынок
+                .blog__bg.bg
+                    +img(img)
+        +blogItem('blog-1.jpg')(class="--lg")
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-2.jpg')(class="--lg")
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+        +blogItem('blog-1.jpg')
+    +pagination()(class="blog__pagination")

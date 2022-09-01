@@ -3,4 +3,55 @@ block vars
     -
         title = "Главная страница"
 block content
-    
+    include ../blocks/intro/intro
+    -
+        favs = [
+            {
+                title: 'Популярные товары',
+                list: [
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                ]
+            },
+            {
+                title: 'Новинки',
+                list: [
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                    { img: 'product-1.png' },
+                ]
+            },
+        ]
+    include ../blocks/favs/favs
+    include ../blocks/advantages/advantages
+    include ../blocks/we/we
+
+     -
+        favs = [
+            {
+                title: 'Аксессуары к кофе',
+                list: [
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                    { img: 'product-2.png', name: 'Весы для кофе с таймером', desc: 'Артикул: 084', text: 'Электронные весы для кофе с таймером 3kg/0.1', vendor_code: 'Артикул: 084', stats: false },
+                ]
+            }
+        ]
+        favsLoadScript = false
+    include ../blocks/favs/favs
+    +script('favs', 'blocks')
+
+    +script('product', 'blocks')
+    +style('price', 'blocks')
+    +style('stats', 'blocks')
+    include ../blocks/reviews/reviews

@@ -1,2 +1,59 @@
+
++style('header', 'blocks')
++style('search', 'blocks')
 header.header
-    +style('header', 'blocks')
+    .header__mob.case.row
+        a.header__logo(href="index.html")
+            +img('logo.svg', 'icon')
+        .header__ham #[div]#[div]#[div]
+    .header__wrap.case.row
+        mixin link(name, href)
+            .header__nav-item
+                a.header__nav-link(href=href)= name
+        nav.header__nav.nav.row
+            +link('Оптовые предложения', '')
+            +link('О нас', '')
+            +link('Доставка и оплата', '')
+            +link('Блог', '')
+            +link('Контакты', '')
+        .header__phone
+            a(href="tel:+79780000000") +7 (978) 000 00 00
+        .header__callback
+            a(href="javascript:;" data-fancybox="" data-src="#modal-callback") Заказать звонок
+        .header__break
+        a.header__logo(href="index.html")
+            +img('logo.svg', 'icon')
+        a.header__btn-catalog.btn.--xs.--bg-black.--round(href="catalog.html")
+            .btn__icon
+                +img('grid.svg', 'icon')
+            .btn__text Каталог товаров
+        .header__search.search
+            form.search__wrap
+                .search__field.field.--xs.--round
+                    .field__wrap
+                        .field__placeholder Поиск
+                        input.field__area(type="text" name="q")
+                button.header__btn.search__btn-submit.btn
+                    .btn__icon
+                        +img('magniffic-glass.svg', 'icon')
+            .header__btn.search__btn-show.search__btn-toggle.btn
+                .btn__icon
+                    +img('magniffic-glass.svg', 'icon')
+                .btn__text Поиск
+        .header__btn.header__btn-cart.btn
+            .btn__icon
+                +img('cart.svg')
+                .btn__label 12
+            .btn__text Корзина
+        .header__btn.header__btn-favorit.btn
+            .btn__icon
+                +img('heart.svg', 'icon')
+                .btn__label 5
+            .btn__text Избранное
+        .header__btn.header__btn-auth.btn
+            .btn__icon
+                +img('user-round.svg', 'icon')
+            .btn__text Войти
+
+    
++script('search', 'blocks')

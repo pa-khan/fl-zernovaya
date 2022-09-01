@@ -1,0 +1,13 @@
+section.steps.case
+    .steps__title.h2 #[h2 ]
+    .steps__list
+        mixin stepsItem(icon, name, text)
+            .steps__item
+                .steps__item-icon
+                    +img(icon)
+                .steps__item-name!=name
+                .steps__item-text!=text
+        +stepsItem('lic.svg', 'Шаг 01', 'Регистрация и подтверждение менеджером')
+        +stepsItem('doc.svg', 'Шаг 02', 'Заполнение профиля')
+        +stepsItem('reg.svg', 'Шаг 03', 'Оформление <br>и оплата заказа')
+        +stepsItem('box.svg', 'Шаг 04', 'Мы собираем и отправляем заказ')

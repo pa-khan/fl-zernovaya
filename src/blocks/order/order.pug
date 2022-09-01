@@ -1,0 +1,66 @@
+include ../../components/radio/radio
+
+section.order.case
+    .order__title.h2 #[h1 Оформление заказа] #[span 3 товара]
+    .order__wrap
+        .order__steps
+            .order__step
+                .order__head
+                    .order__count 1
+                    .order__subtitle Контактные данные
+                .order__body
+                    .order__field.field.--md.--b-gray.--name.--required
+                        .field__wrap
+                            .field__placeholder Имя
+                            input.field__area(type="" name="")
+                    .order__field.field.--md.--b-gray.--name.--required
+                        .field__wrap
+                            .field__placeholder Фамилия
+                            input.field__area(type="" name="")
+                    .order__field.field.--md.--b-gray.--tel.--required
+                        .field__wrap
+                            .field__placeholder Телефон
+                            input.field__area(type="" name="")
+                    .order__field.field.--md.--b-gray.--email.--required
+                        .field__wrap
+                            .field__placeholder Электронная почта
+                            input.field__area(type="" name="")
+                    .order__field.field.--md.--b-gray.--comment
+                        .field__wrap
+                            .field__placeholder Комментарий к заказу
+                            textarea.field__area(type="" name="")
+            .order__step
+                .order__head
+                    .order__count 2
+                    .order__subtitle Доставка
+                .order__body
+                    .order__radios
+                        +radio('Доставка по городу Тула', 'delivery', true)(class="order__radio")
+                        +radio('Самовывоз', 'delivery')(class="order__radio")
+                        +radio('Отправка по адресу', 'delivery')(class="order__radio")
+                    .order__field.field.--md.--b-gray.--name.--required
+                        .field__wrap
+                            .field__placeholder Город
+                            input.field__area(type="" name="")
+                    .order__field.field.--md.--b-gray.--name.--required
+                        .field__wrap
+                            .field__placeholder Улица, дом
+                            input.field__area(type="" name="")
+            .order__step
+                .order__head
+                    .order__count 3
+                    .order__subtitle Оплата
+                .order__body
+                    .order__radios
+                        +radio('Наличными при получении', 'pay', true)(class="order__radio")
+                        +radio('Банковской картой', 'pay')(class="order__radio")
+                    .order__field.field.--md.--b-gray.--name
+                        .field__wrap
+                            .field__placeholder Промокод
+                            input.field__area(type="" name="")
+        - cTotalOrder = true
+        - cTotalClass = 'order__total'
+        include ../c-total/c-total
+    .order__modal.modal.--md#modal-order-thanks
+        .modal__title.h2 Ваш заказ успешно оформлен. Чек мы отправили на почту.
+        .modal__link #[a(href="index.html") На главную]

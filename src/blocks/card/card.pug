@@ -1,0 +1,61 @@
+section.card.case
+    .card__wrap
+        .card__head
+            .card__title.h1.--hide Индонезия Фринса
+            .card__btn-favorit.btn
+                +img('heart.svg')
+        .card__images
+            .card__slider.swiper
+                .card__slider-list.swiper-wrapper
+                    .card__slider-item.swiper-item
+                        +img('product-1.png')
+                    .card__slider-item.swiper-item
+                        +img('product-1.png')
+                    .card__slider-item.swiper-item
+                        +img('product-1.png')
+            .card__controls
+                .card__control.arrow.--prev.swiper-button-prev
+                    +img('chevron.svg')
+                .card__dots.dots.swiper-pagination
+                .card__control.arrow.--next.swiper-button-next
+                    +img('chevron.svg')
+        .card__content
+            .card__head
+                .card__title.h1 #[h1 Индонезия Фринса]
+                .card__btn-favorit.btn
+                    +img('heart.svg')
+            .card__vendor-code Артикул: 084
+            .card__data
+                .card__stats.stats
+                    .stats__list
+                        .stats__item
+                            .stats__name Кислотность
+                            .stats__var #[div(style="75%")]
+                        .stats__item
+                            .stats__name
+                            .stats__var #[div(style="95%")]
+                        .stats__item
+                            .stats__name
+                            .stats__var #[div(style="60%")]
+                        .stats__item
+                            .stats__name Обжарка 
+                            .stats__value Эспрессо
+                .card__desc
+                    p Цветочный аромат и шелковистое тело отлично дополняет фруктовая кислотность, окрашенная сладостью спелой дыни и оттенками малинового варенья. В завершении Вас ждет нежное послевкусие черешни.
+            .card__select.select.--bb
+            .card__incdec.incdec
+            .card__price.price
+                .price__list
+                    .price__item
+                        .price__head
+                            .price__weight 200 г.
+                            .price__discount -40%
+                        .price__body
+                            .price__value=price_1 + ' ₽'
+                    .price__item
+                        .price__head
+                            .price__weight 1 кг.
+                            .price__discount -40%
+                        .price__body
+                            .price__value=price_2 + ' ₽'
+            a.product__btn-add.btn.--md.--bg-bg-black(href="javascript:;") В корзину

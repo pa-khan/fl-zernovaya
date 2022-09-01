@@ -1,0 +1,22 @@
+include ../product/product
+
++style('favs', 'blocks')
++style('product', 'blocks')
+if favs
+    section.favs.case
+        each fav in favs
+            .favs__block
+                .favs__head.row
+                    .favs__title.h2 #[h2= fav.title]
+                    .favs__controls.row
+                        .favs__control.control.--prev.swiper-button-prev
+                            +img('chevron.svg', 'icon')
+                        .favs__dots.dots.swiper-pagination
+                        .favs__control.control.--next.swiper-button-next
+                            +img('chevron.svg', 'icon')
+                .favs__body
+                    if fav.list
+                        .favs__slider.swiper
+                            .favs__list.swiper-wrapper
+                                each item in fav.list
+                                    +product(item.img, item.name, item.vendor_code, item.text, item.stats)(class="favs__item swiper-slide")

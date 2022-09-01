@@ -1,0 +1,14 @@
+mixin pagination()
+    .pagination(class!=attributes.class)
+        .pagination__control.arrow.--prev
+            +img('')
+        nav.pagination__pages
+            .pagination__page.--current  
+            a.pagination__page(href="") 1
+            a.pagination__page(href="") 2
+            a.pagination__page(href="") 3
+            a.pagination__page(href="") 4
+            a.pagination__page(href="") 5
+            a.pagination__page(href="") 6
+        .pagination__control.arrow.--next
+            +img('')

@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "О нас"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../blocks/about/about
+    include ../blocks/job/job
+    include ../blocks/production/production
+    include ../blocks/progress/progress
+    include ../blocks/edu/edu

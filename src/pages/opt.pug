@@ -1,0 +1,19 @@
+extends ../layout/template
+block vars
+    -
+        title = "Опт"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    -
+        slideTitle = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+        slideText = 'И бесплатно доставляем по всей России'
+        slideBtn = 'Зарегистрироваться'
+        slideBg = 'intro-opt-bg.jpg'
+    include ../blocks/slide/slide
+    include ../blocks/work/work
+    include ../blocks/steps/steps
+    include ../blocks/individual/individual
+    include ../blocks/reviews/reviews

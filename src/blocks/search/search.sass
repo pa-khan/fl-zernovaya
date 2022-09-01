@@ -1,0 +1,33 @@
+.search
+    position: relative
+    &__wrap
+        z-index: 1
+        position: absolute
+        right: -5px
+        width: 0
+        overflow: hidden
+        top: 50%
+        transform: translateY(-50%)
+        transition: var(--transition-main)
+    &__field
+        &.field
+            input
+                background-color: #F5F5F5
+                padding-right: 50px
+    &__btn-show
+        margin-right: 0
+    &__btn-submit
+        margin-right: 0
+        position: absolute
+        top: 50%
+        right: 20px
+        width: 15px
+        transform: translateY(-50%)
+        .btn__icon
+            svg
+                width: 100%
+                height: auto
+    &.--show
+        .search
+            &__wrap
+                width: 460px

@@ -1,0 +1,43 @@
+section.contacts.case
+    .contacts__title.h2 #[h1 ]
+    .contacts__wrap
+        .contacts__col
+            .contacts__item
+                .contacts__name Шоурум:
+                .contacts__value
+                    p 300041, Тула, <br>проспект Ленина 24
+            .contacts__item
+                .contacts__name Производство:
+                .contacts__value
+                    p 300024, Тула, Ханинский проезд 8
+            .contacts__item
+                .contacts__name Телефон:
+                .contacts__value
+                    p #[a(href="tel:+79028431961") +7 (902) 843-19-61]
+            .contacts__item
+                .contacts__name Почта:
+                .contacts__value
+                    p #[a(href="mailto:zernovaya.roasters@gmail.com") zernovaya.roasters@gmail.com]
+        .contacts__col
+            .contacts__item
+                .contacts__name Реквизиты:
+                .contacts__value
+                    p ИП ЛЮТОВ АРТЁМ АЛЕКСАНДРОВИЧ
+                    p ИНН 504511857808
+                    p ОГРН 319502200003817
+                    p Р/с 40802810300000948467
+                    p Банк АО "ТИНЬКОФФ БАНК
+                    p ИНН 7710140679
+                    p БИК 044525974
+                    p К/c 30101810145250000974
+
+        form.contacts__form
+            .contacts__form-title Оставьте свой вопрос, отзыв или предложение
+            .contacts__form-field.field.--b-gray.--bg-white.--name.--required
+                .field__wrap
+                    input.field__area(type="text" name="name")
+            .contacts__form-field.field.--b-gray.--bg-white.--phone.--required
+                .field__wrap
+                    input.field__area(type="tel" name="phone")
+            button.contacts__btn.btn.--md.--bg-black Оставить заявку
+            .contacts__policy Отправляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с политикой #[a(href="/privacy-policy.html") обработки персональных данных.] 

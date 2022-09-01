@@ -1,0 +1,20 @@
+mixin noteItem(name = '', readed = false)
+    .nots__item(class=readed ? '--readed' : null)= name
+
+section.nots.case
+    .nots__blocks
+        .nots__block
+            .nots__title Непрочитаные
+            .nots__list
+                +noteItem('Заканчивается скидка 20% на все виды товаров')
+                +noteItem('Заканчивается скидка 20% на все виды товаров')
+                +noteItem('Заканчивается скидка 20% на все виды товаров')
+                +noteItem('Заканчивается скидка 20% на все виды товаров')
+    .nots__blocks
+        .nots__block
+            .nots__title Прочитанные
+            .nots__list
+                +noteItem('Заканчивается скидка 20% на все виды товаров', true)
+                +noteItem('Заканчивается скидка 20% на все виды товаров', true)
+                +noteItem('Заканчивается скидка 20% на все виды товаров', true)
+                +noteItem('Заканчивается скидка 20% на все виды товаров', true)

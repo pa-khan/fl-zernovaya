@@ -1,0 +1,56 @@
+mixin product(img = 'product-1.png', name = 'Эфиопия Акация', vendor_code = 'Артикул: 084', text = 'Цветочный аромат и шелковистое тело отлично дополняет фруктовая кислотность, окрашенная сладостью спелой дыни и оттенками малинового варенья. В завершении Вас ждет нежное послевкусие черешни.', stats = true, price_1 = 3099, price_2 = 10099)
+    .product(class!=attributes.class)
+        .product__btn-favorit.btn
+            +img('heart.svg', 'icon')
+            +img('heart-bg.svg', 'icon')
+        .product__img
+            +img(img)
+        .product__name.h4 #[a(href="product.html")= name]
+        .product__vendor-code= vendor_code
+        .product__text= text
+        if stats
+            .product__stats.stats
+                .stats__list
+                    .stats__item
+                        .stats__name Кислотность
+                        .stats__value #[div(style="width: 75%")]
+                    .stats__item
+                        .stats__name Сладость
+                        .stats__value #[div(style="width: 95%")]
+                    .stats__item
+                        .stats__name Горечь
+                        .stats__value #[div(style="width: 60%")]
+                    .stats__item
+                        .stats__name Обжарка 
+                        .stats__desc Эспрессо
+        if stats
+            .product__controls.row
+                .product__select.select.--bb
+                    select(name="grinding")
+                        option(value="Не молоть" selected="selected") Не молоть
+                        option(value="В зернах") В зернах
+                .product__incdec.incdec
+                    .incdec__btn.btn.--minus
+                    input.incdec__input(type="tel" name="")
+                    .incdec__btn.btn.--plus
+        .product__price.price
+            .price__list
+                .price__item(data-price=price_1)
+                    .price__head
+                        .price__weight 200 г.
+                        .price__discount -40%
+                    .price__body
+                        .price__value #[var= price_1] ₽
+                if stats
+                    .price__item(data-price=price_2)
+                        .price__head
+                            .price__weight 1 кг.
+                            .price__discount -40%
+                        .price__body
+                            .price__value #[var= price_2] ₽
+                if !stats
+                    a.price__btn-add.btn.--md.--bg-black.--round(href="javascript:;") В корзину
+        if stats
+            .product__btns
+                a.product__btn-add.btn.--md.--bg-black.--round(href="javascript:;") В корзину
+                a.product__btn-more.btn.--md.--b-black.--round(href="product.html") Подробнее

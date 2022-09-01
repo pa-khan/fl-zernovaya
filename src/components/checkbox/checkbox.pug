@@ -1,0 +1,6 @@
+mixin checkbox(value, name, checked = false)
+    .check.checkbox(class!=attributes.class)
+        input(type="checkbox" name=name value=value checked=checked ? 'checked' : null)
+        .checkbox__box
+            +img('check.svg')
+        .checkbox__text= value

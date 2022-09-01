@@ -1,0 +1,45 @@
++style('swiper.css')
++style('intro', 'blocks')
+section.intro.bgw
+    .intro__wrap
+        .intro__slider.swiper
+            .intro__list.swiper-wrapper
+                mixin introItem    
+                    .intro__item.swiper-slide.case
+                        .intro__img-wrap
+                            .intro__img
+                                +img('intro-product.png')
+                            .intro__price 400 ₽
+                            
+                        .intro__content
+                            .intro__title.h1 #[h1 Каждый день мы обжариваем кофе]
+                            .intro__text И бесплатно доставляем по всей России
+                            a.intro__btn.btn.--inline.--lg.--bg-black.--round(href="")
+                                .btn__text Подробнее о товаре
+                +introItem
+                +introItem
+                +introItem
+                +introItem
+                +introItem
+        .case
+            .intro__nav
+                .intro__values
+                    .intro__value.--current
+                    .intro__value.--total
+                .intro__controls
+                    .intro__control.control.--prev.swiper-button-prev
+                        +img('chevron.svg', 'icon')
+                    .intro__dots.dots.swiper-pagination
+                    .intro__control.control.--next.swiper-button-next
+                        +img('chevron.svg', 'icon')
+        .intro__bg.bg
+            +img('intro-bg.jpg')
+    .intro__leaves
+        .intro__leave.--left
+            +img('leave-1.png')
+        .intro__leave.--middle
+            +img('leave-2.png')
+        .intro__leave.--right
+            +img('leave-3.png')
+
++script('intro', 'blocks')

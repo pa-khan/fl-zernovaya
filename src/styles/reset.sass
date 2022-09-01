@@ -10,8 +10,40 @@ body
     background-color: var(--color-white)
 
 .wrap
+    position: relative
     display: flex
     flex-direction: column
+    overflow-x: hidden
 
 html, body, .wrap
     min-height: 100vh
+
+h1, h2, h3, h4, h5, h6
+    font: inherit
+
+a
+    color: var(--black)
+    text-decoration: none
+    transition: var(--transition-main)
+    outline: none
+    appearance: none
+
+picture, img
+    display: block
+    max-width: 100% !important
+    max-height: 100% !important
+
+svg
+    display: block
+
+path, round, rect
+    transition: var(--transition-main)
+
+var, i
+    font-style: inherit
+
+b, strong
+    font-weight: inherit
+
+u
+    text-decoration: none

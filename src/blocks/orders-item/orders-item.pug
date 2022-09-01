@@ -1,0 +1,19 @@
+section.orders-item.case
+    .orders-item__title 
+        a(href="orders.html")
+            +img('chevron.svg', 'icon')
+        h1 Заказ №8289
+    .orders-item__subtitle Информация о заказе
+    .orders-item__btn.btn.--md.--bg-black
+        .btn__icon
+            +img('docx.svg', 'icon')
+        .btn__text Документы
+    .orders-item__table
+        .orders-item__row.--head
+            .orders-item__col Организация
+            .orders-item__col Статус
+            .orders-item__col Сумма
+        .orders-item__row
+            .orders-item__col Название организации
+            .orders-item__col.--bold Отгружен
+            .orders-item__col.--bold 3099 ₽

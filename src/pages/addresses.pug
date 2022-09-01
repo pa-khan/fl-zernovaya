@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "Адреса"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    - paAddress = true
+    include ../blocks/pa/pa

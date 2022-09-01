@@ -1,0 +1,26 @@
++style('reviews', 'blocks')
+section.reviews.case
+    .reviews__head.row
+        .reviews__title.h2 #[h2 Отзывы наших клиентов]
+        .reviews__controls.row
+            .reviews__control.control.--prev.swiper-button-prev
+                +img('chevron.svg')
+            .reviews__dots.dots.swiper-pagination
+            .reviews__control.control.--next.swiper-button-next
+                +img('chevron.svg')
+    .reviews__body
+        .reviews__slider.swiper
+            .reviews__list.swiper-wrapper
+                mixin reviewsItem(name = 'Иван Иванов', desc = 'г. Одинцово', text = 'Это первый мой отзыв в интернете, потому что так сильно меня до этого не цепляло ничего. Вы большие молодцы. Всяческих успехов ВАМ! Вы пример для многих других видов бизнеса в РФ. Клиентоориентированость, ифнормативность (даже новичок разберется), отличный переход в описании кофе от основных характеристик до полного описания. Сайт и приложение максимальное удобное. Надеюсь у вас есть план для дальнейшего развития(хотя кажется что вы уже на пике), успехов. За комплимент ( в виде шоколадок) отдельное спасибо') 
+                    .reviews__item.swiper-slide
+                        .reviews__name.h4= name
+                        .reviews__desc= desc
+                        .reviews__text= text
+                +reviewsItem
+                +reviewsItem
+                +reviewsItem
+                +reviewsItem
+                +reviewsItem
+                +reviewsItem
+
++script('reviews', 'blocks')

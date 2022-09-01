@@ -1,0 +1,14 @@
+extends ../layout/template
+block vars
+    -
+        title = "Личный кабинет"
+        breadcrumbs = [
+            ['Главная', 'index.html'],
+            [title]
+        ]
+block content
+    include ../components/breadcrumb/breadcrumb
+    +breadcrumb
+
+    - paData = true
+    include ../blocks/pa/pa

@@ -1,4 +1,89 @@
+@import fonts
 @import vars
 @import reset
 
 @import 'Components/case/case'
+@import 'Components/btn/btn'
+@import 'Components/field/field'
+@import 'Components/select/select'
+@import 'Components/incdec/incdec'
+
+.row
+    display: flex
+    flex-wrap: wrap
+
+.bgw
+    position: relative
+.bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    picture, img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.h1
+    font-size: 50px
+    line-height: 1.5
+    font-weight: 800
+    text-transform: uppercase
+
+.h2
+    font-size: 30px
+    line-height: 1.5
+    font-weight: 500
+
+.h3
+    font-size: 22px
+    line-height: 1.5
+    font-weight: 500
+
+.h4
+    font-size: 20px
+    line-height: 1.5
+    font-weight: 500
+
+.dots
+    display: flex
+    flex-wrap: wrap
+    .swiper-pagination-bullet
+        width: 8px
+        height: 8px
+        border-radius: 20px
+        background: #C4C4C4
+        transition: var(--transition-main)
+        margin-right: 9px
+        &:last-child
+            margin-right: 0
+        &.swiper-pagination-bullet-active
+            width: 18px
+            background: var(--color-black)
+
+.control
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    box-shadow: 0px 2px 10px rgba(106, 106, 106, 0.2)
+    background-color: var(--color-black)
+    cursor: pointer
+    transition: var(--transition-main)
+    &.--prev
+        svg
+            margin-left: -1px
+            transform: rotate(180deg)
+    &.--next
+        svg
+            margin-right: -1px
+    &:hover
+        background-color: var(--color-blue)
+    &.swiper-button-disabled
+        cursor: default
+        background-color: var(--color-white)
+        path
+            fill: var(--color-black)

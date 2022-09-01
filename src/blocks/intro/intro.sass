@@ -1,0 +1,95 @@
+.intro
+    --intro-img-wrap: 600px
+    margin-bottom: 55px
+    &__item
+        display: flex
+        align-items: center
+        &.swiper-slide-active
+            .intro
+                &__content
+                    opacity: 1
+    &__img-wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        width: var(--intro-img-wrap)
+        height: 600px
+    &__price
+        position: absolute
+        top: 70px
+        right: 0
+        padding: 4px 11px 2px
+        font-weight: 700
+        color: var(--color-white)
+        background: var(--color-black)
+        border-radius: 10px 0 10px 0
+    &__content
+        opacity: 0
+        width: calc(100% - var(--intro-img-wrap))
+        padding-left: 20px
+        transition: .5s
+        // transition-delay: .1s
+        *:last-child
+            margin-bottom: 0
+    &__title
+        margin-right: -20px
+        margin-bottom: 10px
+    &__text
+        font-size: 20px
+        line-height: 1.5
+        margin-bottom: 30px
+    &__btn
+        min-width: 240px
+    &__nav
+        display: flex
+        align-items: center
+        justify-content: center
+        z-index: 5
+        position: relative
+        width: var(--intro-img-wrap)
+        padding-left: 120px
+        padding-right: 120px
+        padding-bottom: 45px
+        margin-top: -30px
+    &__values
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        align-items: flex-end
+        line-height: 17px
+        min-width: 120px
+        height: 30px
+        padding-top: 2px
+    &__value
+        &.--current
+            font-size: 24px
+        &.--total
+            &::before
+                content: '/'
+    &__controls
+        display: flex
+        align-items: center
+        justify-content: center
+        // margin-left: auto
+        // margin-right: auto
+    &__dots
+        margin-left: 20px
+        margin-right: 20px
+    &__leave
+        z-index: 1
+        position: absolute
+        pointer-events: none
+        &.--left
+            top: -147px
+            left: 0
+        &.--middle
+            left: 50%
+            top: 50%
+            margin-top: -20px
+            margin-left: -40px
+            transform: translate(-50%, -50%)
+        &.--right
+            bottom: -61px
+            right: 0

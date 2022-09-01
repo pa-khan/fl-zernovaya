@@ -1,0 +1,5 @@
+mixin radio(value, name, checked = false)
+    .check.radio(class!=attributes.class)
+        input(type="radio" name=name value=value checked=checked ? 'checked' : null)
+        .radio__box
+        .radio__text= value

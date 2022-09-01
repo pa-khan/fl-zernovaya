@@ -1,0 +1,74 @@
+.select
+    select
+        display: none
+    &__wrap
+        position: relative
+        cursor: pointer
+    &__area
+        z-index: 3
+        position: relative
+        display: flex
+        align-items: center
+        height: 37px
+        transition: var(--transition-main)
+    &__title
+        padding-top: 2px
+    &__icon
+        width: 8px
+        height: 12px
+        fill: #000
+        margin-left: 10px
+        transform: rotate(90deg)
+        transition: var(--transition-main)
+        background: url('Images/chevron-black.svg') no-repeat center / 100%
+    &__drop
+        z-index: 2
+        opacity: 0
+        top: 100%
+        left: 0
+        right: 0
+        position: absolute
+        transform: translateY(10px)
+        transition: var(--transition-main)
+        visibility: hidden
+        background-color: #fff
+        border: 1px solid var(--color-black)
+        border-top: none
+        margin-top: -2px
+        padding-top: 2px
+        overflow: hidden
+    &__item
+        padding: 4px 10px
+        transition: var(--transition-main)
+        &.--current, &:hover
+            color: var(--color-white)
+            background-color: var(--color-black)
+        &:last-child
+            border-radius: 0 0 5px 5px
+    &.--bb
+        .select
+            &__title
+                font-size: 18px
+                line-height: 27px
+                border-bottom: 1px dashed var(--color-black)
+    &.--b-black
+        .select
+            &__area
+                border: 1px solid var(--color-black)
+                padding-left: 10px
+                padding-right: 10px
+                border-radius: 5px
+                padding-top: 2px
+            &__title
+                border-color: transparent
+            &__drop
+                border-radius: 0 0 5px 5px
+    &.--open
+        z-index: 10
+        .select
+            &__drop
+                opacity: 1
+                visibility: visible
+                transform: translateY(0)
+            &__icon
+                transform: rotate(-90deg)
