@@ -1,0 +1,77 @@
+.blog
+    padding-bottom: 100px
+    &__title
+        margin-bottom: 45px
+    &__list
+        margin: 0 -10px -20px
+    &__item
+        width: calc(100% / 3 - 20px)
+        height: 380px
+        margin: 0 10px 20px
+        color: #fff
+        overflow: hidden
+        border-radius: 5px
+        &.--lg
+            width: calc(100% / 3 * 2 - 20px)
+        &:hover
+            .blog
+                &__bg
+                    transform: scale(1.06)
+    &__data
+        display: flex
+        flex-wrap: wrap
+        &-item
+            display: flex
+            align-items: center
+            margin-bottom: 19px
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+        &-icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 16px
+            height: 16px
+            margin-right: 10px
+            path
+                fill: #fff
+        &-value
+            font-size: 12px
+            line-height: 1
+            padding-top: 1px
+    &__inner
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+        padding: 30px 20px
+    &__content
+        margin-top: auto
+        *:last-child
+            margin-bottom: 0
+    &__name
+        margin-bottom: 10px
+        a
+            &::before
+                z-index: 10
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+    &__desc
+        font-size: 14px
+        line-height: 1.5
+    &__bg
+        z-index: -1
+        transition: var(--transition-main)
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.53) 67.57%)

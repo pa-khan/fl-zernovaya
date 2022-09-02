@@ -1,28 +1,16 @@
+include ../c-item/c-item
+
++style('cart', 'blocks')
++style('c-item', 'blocks')
 section.cart.case
     .cart__title.h2 #[h1 Корзина] #[span 3 товара]
-    .cart__wrap
+    .cart__wrap.row
         .cart__list
-            mixin cartItem
-                .cart__item.c-item
-                    .c-item__img-wrap
-                        .c-item__img
-                            +img('product-1.png')
-                    .c-item__content
-                        .c-item__head
-                            .c-item__name Эфиопия Акация
-                            .c-item__vendor-code Артикул: 084
-                            .c-item__remove.btn
-                        .c-item__body
-                            .c-item__select.select.--line
-                            .c-item__incdec
-                            .c-item__data
-                                .c-item__weight 200 г.
-                                .c-item__percent -40%
-                                .c-item__price 3099 ₽
-            +cartItem
-            +cartItem
-            +cartItem
+            +cartItem()(class="cart__item")
+            +cartItem()(class="cart__item")
+            +cartItem()(class="cart__item")
         
         - cTotalClass = 'cart__total'
         include ../c-total/c-total
 
++script('product', 'blocks')

@@ -1,6 +1,6 @@
 section.contacts.case
-    .contacts__title.h2 #[h1 ]
-    .contacts__wrap
+    .contacts__title.h2 #[h1 Контакты]
+    .contacts__wrap.row
         .contacts__col
             .contacts__item
                 .contacts__name Шоурум:
@@ -33,11 +33,14 @@ section.contacts.case
 
         form.contacts__form
             .contacts__form-title Оставьте свой вопрос, отзыв или предложение
-            .contacts__form-field.field.--b-gray.--bg-white.--name.--required
+            .contacts__form-field.field.--md.--b-gray.--bg-white.--name.--round.--required
                 .field__wrap
+                    .field__placeholder Ваше имя*
                     input.field__area(type="text" name="name")
-            .contacts__form-field.field.--b-gray.--bg-white.--phone.--required
+            .contacts__form-field.field.--md.--b-gray.--bg-white.--phone.--round.--required
                 .field__wrap
+                    .field__placeholder Ваш телефон*
                     input.field__area(type="tel" name="phone")
-            button.contacts__btn.btn.--md.--bg-black Оставить заявку
+            button.contacts__form-btn.btn.--md.--bg-black.--round Оставить заявку
             .contacts__policy Отправляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с политикой #[a(href="/privacy-policy.html") обработки персональных данных.] 
++style('contacts', 'blocks')

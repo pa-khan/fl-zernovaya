@@ -1,0 +1,26 @@
+mixin cartItem
+    .c-item(class!=attributes.class)
+        .c-item__img-wrap
+            .c-item__img
+                +img('product-1.png')
+        .c-item__content
+            .c-item__head
+                .c-item__name #[a(href="product.html") Эфиопия Акация]
+                .c-item__vendor-code Артикул: 084
+                .c-item__remove.btn.product__btn-remove
+                    +img('cancel.svg', 'icon')
+            .c-item__body
+                .c-item__select-wrap
+                    .c-item__select.product__select.select.--bb
+                        select(name="grinding")
+                            option(value="Не молоть" selected="selected") Не молоть
+                            option(value="В зернах") В зернах
+                .c-item__incdec.incdec
+                    .incdec__btn.btn.--minus
+                    input.incdec__input(type="tel" name="")
+                    .incdec__btn.btn.--plus
+                .c-item__data
+                    .c-item__data-head
+                        .c-item__weight 200 г.
+                        .c-item__discount -40%
+                    .c-item__price 3 099 ₽

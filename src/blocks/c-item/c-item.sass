@@ -1,0 +1,83 @@
+.c-item
+    position: relative
+    display: flex
+    align-items: center
+    --c-item-img-width: 145px
+    &__img-wrap
+        width: var(--c-item-img-width)
+    &__content
+        padding-left: 43px
+        width: calc(100% - var(--c-item-img-width))
+    &__head
+        display: flex
+        flex-shrink: wrap
+        align-items: center
+        margin-bottom: 10px
+    &__name
+        font-size: 18px
+        line-height: 1.5
+        font-weight: 500
+        a
+            &:after
+                z-index: 1
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+    &__vendor-code
+        margin-left: 15px
+        font-size: 14px
+        line-height: 1.5
+        color: var(--color-gray)
+    &__remove
+        z-index: 2
+        position: relative
+        padding-top: 0
+        margin-left: auto
+        transform: none !important
+        top: -2px
+        &:hover
+            path
+                fill: var(--color-black)
+    &__body
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__select-wrap
+        min-width: 130px
+    &__select
+        display: inline-flex
+    &__incdec
+        z-index: 2
+        position: relative
+        margin-left: auto
+        margin-right: auto
+    &__data
+        margin-left: 30px
+        // max-width: 120px
+        white-space: nowrap
+        &-head
+            display: flex
+    &__weight
+        line-height: 1.5
+    &__discount
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        border-radius: 2px
+        color: var(--color-white)
+        font-size: 12px
+        line-height: 12px
+        padding: 2px 7px 0
+        height: 20px
+        background-color: var(--color-black)
+        margin-left: 14px
+    &__price
+        // flex-basis: 100%
+        font-size: 26px
+        line-height: 1.5
+        font-weight: 500
+        margin-top: 4px

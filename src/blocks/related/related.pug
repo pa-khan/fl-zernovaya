@@ -1,10 +1,10 @@
-include ../../components/pagination/pagination
-
-section.blog.case
-    .blog__title.h2 #[h1 Блог]
-    .blog__list.row
++style('related', 'blocks')
++style('blog', 'blocks')
+section.related.case
+    .related__title.h2 #[h2 ]
+    .related__list.row
         mixin blogItem(img = '')
-            article.blog__item.bgw(class!=attributes.class)
+            article.related__item.blog__item.bgw(class!=attributes.class)
                 .blog__inner
                     .blog__data
                         .blog__data-item
@@ -24,22 +24,6 @@ section.blog.case
                         .blog__desc Одноствольная система выращивания кофе может изменить рынок
                 .blog__bg.bg
                     +img(img)
-        +blogItem('blog-1.jpg')(class="--lg")
         +blogItem('blog-1.jpg')
         +blogItem('blog-1.jpg')
         +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-2.jpg')(class="--lg")
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-        +blogItem('blog-1.jpg')
-    +pagination()(class="blog__pagination")
-
-+style('blog', 'blocks')

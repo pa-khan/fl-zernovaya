@@ -1,5 +1,5 @@
 
-const $products = document.querySelectorAll('.product');
+const $products = document.querySelectorAll('.product, .c-item');
 
 if ($products.length > 0) {
     document.addEventListener('DOMContentLoaded', () => {
@@ -20,13 +20,21 @@ if ($products.length > 0) {
 
             $product.isFavorit = $product.dataset.favorit && $product.dataset.favorit == 'true' ? true : false;
             $product.$btnFavorit = $product.querySelectorAll('.product__btn-favorit');
+            $product.$btnRemove = $product.querySelector('.product__btn-remove');
             $product.$incdec = $product.querySelector('.incdec');
             $product.$prices = $product.querySelectorAll('.product .price__item');
             $product.$pricesCurrent = $product.$prices[0];
             $product.$select = $product.querySelector('.select');
 
+
             if ($product.isFavorit) {
                 $product.classList.add($products.classFavorit);
+            }
+
+            if ($product.$btnRemove) {
+                $product.$btnRemove.addEventListener('click', () => {
+                    $product.remove();
+                });
             }
 
             $product.$btnFavorit.forEach(($btn) => {
@@ -61,7 +69,9 @@ if ($products.length > 0) {
                 }
             });
 
-            $product.$pricesCurrent.classList.add(window._CLASS.current);
+            if ($product.$pricesCurrent) {
+                $product.$pricesCurrent.classList.add(window._CLASS.current);
+            }
 
             if ($product.$incdec) {
                 // $product.$incdec.addEventListener('change', () => {

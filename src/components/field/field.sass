@@ -33,6 +33,10 @@
         .field
             &__area
                 background-color: var(--color-white)
+    &.--b-gray
+        .field
+            &__area
+                border: 1px solid #D4D4D4
     &.--xs
         input
             height: 35px
@@ -40,6 +44,17 @@
             padding-right: 20px
         input, textarea, .field__placeholder
             font-size: 14px
+            padding-left: 20px
+            padding-right: 20px
+        .field
+            &__placeholder
+                padding-top: 1px
+    &.--md
+        input
+            height: 50px
+            padding-left: 20px
+            padding-right: 20px
+        input, textarea, .field__placeholder
             padding-left: 20px
             padding-right: 20px
         .field
