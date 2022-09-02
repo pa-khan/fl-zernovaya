@@ -10,7 +10,7 @@
         margin-right: -10px
     &__col
         padding-left: 10px
-        padding-right: 10px
+        padding-right: 14px
         &:nth-of-type(1)
             width: 42%
         &:nth-of-type(2)
@@ -19,7 +19,7 @@
             width: 33%
     &__item
         position: relative
-        padding: 30px 30px 34px
+        padding: 28px 30px 34px
         background: #FAFAFA
         border-radius: 10px
         height: 100%
@@ -31,20 +31,22 @@
                     margin-bottom: 19px
                 &__img
                     position: absolute
-                    bottom: 0
+                    bottom: 10px
                     right: 0
         &.--pay
+            padding: 28px 18px 34px
             .work
                 &__img
                     margin-top: 20px
         &.--buy
+            padding: 28px 18px 34px
             .work
                 &__text
                     max-width: 215px
                 &__img
                     position: absolute
-                    right: 5px
-                    bottom: 46px
+                    right: 8px
+                    bottom: 42px
                     width: 140px
     &__name
         font-size: 26px
@@ -54,7 +56,7 @@
         margin-bottom: 10px
     &__text
         font-size: 14px
-        line-height: 26px
+        line-height: 21px
         *:first-child
             margin-top: 0
         *:last-child
@@ -63,8 +65,82 @@
             font-size: 16px
             line-height: 26px
             font-weight: 500
-            margin-top: 26px
+            margin-top: 22px
+            padding-right: 20px
         h5
             line-height: 21px
             font-weight: 700
-            margin-top: 26px
+            margin-top: 20px
+
+@media screen and (max-width: 1179px)
+    .work
+        padding-bottom: 80px
+        &__col
+            padding-left: 5px
+            padding-right: 5px
+        &__item
+            padding: 28px 18px 34px
+            &.--delivery
+                .work
+                    &__img
+                        width: 220px
+            &.--buy
+                .work
+                    &__img
+                        width: 110px
+                        bottom: 35px
+
+@media screen and (max-width: 991px)
+    .work
+        &__list
+            margin-bottom: -25px
+        &__col
+            width: 50% !important
+            padding-left: 10px
+            padding-right: 10px
+            margin-bottom: 25px
+        &__item
+            &.--delivery
+                .work
+                    &__img
+                        width: 200px
+
+@media screen and (max-width: 767px)
+    .work
+        padding-bottom: 115px
+        &__col
+            width: 100% !important
+        &__item
+            padding: 28px 30px 34px
+            overflow: hidden
+            &.--delivery
+                .work
+                    &__img
+                        width: 250px
+                        right: -15px
+                        bottom: 20px
+            &.--pay
+                padding: 28px 18px 24px
+                .work
+                    &__img
+                        margin-top: 10px
+            &.--buy
+                padding: 28px 18px 24px
+                .work
+                    &__img
+                        width: 150px
+                        bottom: 28px
+
+@media screen and (max-width: 410px)
+    .work
+        padding-bottom: 80px
+        &__item
+            padding: 28px 18px 24px
+            &.--delivery
+                .work
+                    &__img
+                        width: 220px
+            &.--buy
+                .work
+                    &__img
+                        width: 130px

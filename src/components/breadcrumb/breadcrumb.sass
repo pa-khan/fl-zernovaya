@@ -1,6 +1,6 @@
 .breadcrumb
     padding-top: 10px
-    padding-bottom: 40px
+    padding-bottom: 50px
     &.--gray
         background: var(--color-white-dark)
     &__list
@@ -33,3 +33,7 @@
     &__name
         padding-top: 1px
         display: inline-block
+
+@media screen and (max-width: 767px)
+    .breadcrumb
+        padding-bottom: 10px

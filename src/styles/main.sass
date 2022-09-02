@@ -68,7 +68,7 @@
         display: flex
         flex-direction: column
         margin-top: 10px
-        margin-bottom: 10px
+        margin-bottom: 20px
     li
         position: relative
         display: block
@@ -139,6 +139,42 @@
         path
             fill: var(--color-black)
 
+.sitemap
+    padding-top: 100px
+    padding-bottom: 100px
+    display: flex
+    flex-wrap: wrap
+    ul
+        width: calc( 100% / 3 )
+        list-style: none
+        li
+            font-size: 22px
+            padding-left: 15px
+            margin-bottom: 15px
+            position: relative
+            &:before
+                top: 50%
+                left: 0
+                width: 5px
+                height: 5px
+                border-radius: 50%
+                background: var(--color-black)
+                transform: translateY(-50%) scale(0)
+                transition: .3s
+                opacity: 0
+                visibility: hidden
+                content: ""
+                position: absolute
+            &:last-of-type
+                margin-bottom: 0
+            &:hover
+                color: var(--color-blue)
+                &:before
+                    opacity: 1
+                    visibility: visible
+                    background: var(--color-blue)
+                    transform: translateY(-50%) scale(1)
+
 @media screen and (max-width: 1179px)
     .h1
         font-size: 45px
@@ -147,13 +183,38 @@
     .h1
         font-size: 42px
 
+    .sitemap
+        padding-top: 60px
+        padding-bottom: 60px
+        ul
+            width: 50%
+            margin-bottom: 40px
+
 @media screen and (max-width: 767px)
     .h1
         font-size: 35px
 
+    .t1
+        p
+            margin-bottom: 18px
+        h4
+            font-size: 16px
+        li
+            font-size: 16px
+            margin-bottom: 12px
+            &:before
+                top: 50%
+                transform: translateY(-50%)
+
     .control
         width: 30px
         height: 30px
+
+    .sitemap
+        padding-top: 40px
+        padding-bottom: 40px
+        ul
+            width: 100%
 
 @media screen and (max-width: 410px)
     .h1
@@ -164,3 +225,8 @@
 
     .h3
         font-size: 20px
+
+    .sitemap
+        ul
+            li
+                font-size: 20px
