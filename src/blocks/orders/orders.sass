@@ -117,6 +117,8 @@
 
 @media screen and (max-width: 767px)
     .orders
+        // width: 800px
+        overflow-x: auto
         &__links
             flex-direction: column
         &__link
@@ -125,8 +127,7 @@
             &:last-of-type
                 margin-bottom: 0
         &__wrap
-            width: 800px
-            overflow-x: scroll
+            min-width: 800px
         &__row
             &.--head
                 padding-top: 15px
