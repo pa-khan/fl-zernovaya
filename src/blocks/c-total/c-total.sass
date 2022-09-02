@@ -96,3 +96,29 @@
             border-bottom: 1px solid var(--color-gray)
             &:hover
                 border-color: transparent
+
+@media screen and (max-width: 991px)
+    .c-total
+        padding: 30px 20px
+
+@media screen and (max-width: 560px)
+    .c-total
+        &__btn-submit
+            width: 100%
+            min-width: 1px
+
+@media screen and (max-width: 440px)
+    .c-total
+        &__item
+            position: relative
+            display: block
+        &__img-wrap
+            width: 145px
+            height: 130px
+        &__content
+            width: 100%
+            padding-left: 0
+        &__btn-remove
+            position: absolute
+            top: 5px
+            right: 0

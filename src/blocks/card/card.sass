@@ -1,8 +1,7 @@
 .card
     --card-slider-width: 540px
     background: var(--color-white-dark)
-    &__images
-        padding-bottom: 45px
+    padding-bottom: 45px
     &__slider
         width: var(--card-slider-width)
         &-item
@@ -32,7 +31,6 @@
         position: relative
         margin-left: auto
         z-index: 5
-        right: 25px
         width: 24px
         transition: var(--transition-main)
         svg
@@ -88,3 +86,41 @@
                         transform: scale(0)
                     &:nth-of-type(2)
                         transform: scale(1)
+
+@media screen and (max-width: 1179px)
+    .card
+        &__data
+            flex-direction: column
+            margin-left: 0
+            margin-right: 0
+            &-col
+                width: 100%
+                margin-left: 0
+                margin-right: 0
+                &:nth-of-type(1)
+                    order: 2
+                &:nth-of-type(2)
+                    order: 1
+        &__desc
+            margin-bottom: 20px
+        &__settings
+            margin-bottom: 20px
+
+@media screen and (max-width: 991px)
+    .card
+        --card-slider-width: 100%
+        &__wrap
+            display: block
+        &__images
+            margin-bottom: 20px
+        &__controls
+            padding-top: 10px
+        &__head
+            display: none
+            width: 100%
+            &.--hide
+                display: flex
+
+        &__content
+            width: 100%
+            padding-left: 0

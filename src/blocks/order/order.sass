@@ -7,12 +7,14 @@
         margin-bottom: 45px
         h1, span
             display: inline
+        h1
+            margin-right: 9px
         span
             font-size: 14px
             line-height: 1.5
             font-weight: 400
             color: var(--color-gray)
-            margin-left: 9px
+            white-space: nowrap
     &__steps
         width: calc(100% - var(--cart-total-width))
         padding-right: 175px
@@ -84,3 +86,31 @@
                 border-bottom: 1px solid var(--color-black)
                 &:hover
                     border-color: transparent
+
+@media screen and (max-width: 1179px)
+    .order
+        &__steps
+            padding-right: 50px
+
+@media screen and (max-width: 991px)
+    .order
+        padding-bottom: 50px
+        &__title
+            margin-bottom: 35px
+        &__wrap
+            display: block
+        &__steps
+            width: 100%
+            margin-bottom: 60px
+        &__total
+            width: 100%
+        &__steps
+            padding-right: 0
+
+@media screen and (max-width: 430px)
+    .order
+        &__title
+            span
+                display: none
+        &__field
+            width: 100%

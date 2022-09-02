@@ -75,3 +75,24 @@
             right: 0
             bottom: 0
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.53) 67.57%)
+
+@media screen and (max-width: 991px)
+    .blog
+        &__item
+            width: calc(100% / 2 - 20px)
+            &.--lg
+                width: calc(100% / 2 - 20px)
+
+@media screen and (max-width: 767px)
+    .blog
+        padding-bottom: 50px
+        &__title
+            margin-bottom: 35px
+
+@media screen and (max-width: 630px)
+    .blog
+        &__item
+            width: calc(100% - 20px)
+            height: 345px
+            &.--lg
+                width: calc(100% - 20px)

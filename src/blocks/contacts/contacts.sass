@@ -8,7 +8,7 @@
     &__col
         width: 335px
         margin-right: 95px
-        &:last-child
+        &:nth-of-type(2)
             margin-right: 0
     &__item
         font-size: 20px
@@ -51,3 +51,35 @@
             border-bottom: 1px solid var(--color-gray)
             &:hover
                 border-color: transparent
+
+@media screen and (max-width: 991px)
+    .contacts
+        &__title
+            margin-bottom: 35px
+        &__wrap
+            padding: 35px 30px
+        &__col
+            width: 100%
+            margin-right: 0
+            margin-bottom: 20px
+        &__form
+            margin-top: 20px
+            &-title
+                margin-bottom: 20px
+
+@media screen and (max-width: 767px)
+    .contacts
+        padding-bottom: 50px
+@media screen and (max-width: 600px)
+    .contacts
+        &__form
+            &-field, &-btn
+                width: 100%
+
+@media screen and (max-width: 400px)
+    .contacts
+        &__item
+            font-size: 18px
+            line-height: 1.4
+        &__value
+            font-size: 16px

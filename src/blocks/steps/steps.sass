@@ -68,9 +68,15 @@
             &-text
                 max-width: 100%
                 min-height: 64px
+        &__bg
+            left: 50%
+            width: 1000px
+            transform: translateX(-50%)
 
 @media screen and (max-width: 767px)
     .steps
+        padding-top: 100px
+        padding-bottom: 100px
         &__title
             margin-bottom: 42px
         &__item
@@ -85,7 +91,19 @@
                     &__item
                         &-name
                             margin-top: 20px
+        &__bg
+            left: 50%
+            width: 800px
+            img
+                image-rendering: pixelated
 
+@media screen and (max-width: 450px)
+    .steps
+        padding-top: 60px
+        padding-bottom: 60px
+        background: #212128
+        &__bg
+            display: none
 @media screen and (max-width: 410px)
     .steps
         &__list

@@ -102,3 +102,27 @@
                         transform: scale(0)
                     &:nth-of-type(2)
                         transform: scale(1)
+
+@media screen and (max-width: 767px)
+    .c-item
+        display: block
+        &__img-wrap
+            width: 205px !important
+            height: 165px !important
+            margin-bottom: 14px
+        &__content
+            padding-left: 0
+            width: 100%
+        &__btn-favorit, &__remove
+            position: absolute
+            top: 0
+            right: 0
+        &__head
+            margin-bottom: 0
+
+@media screen and (max-width: 435px)
+    .c-item
+        &__data
+            flex-basis: 100%
+            margin-left: 0
+            margin-top: 10px
