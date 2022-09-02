@@ -2,6 +2,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
+    "@fancyapps/ui": "^4.0.31",
     "@webpack-cli/generators": "^2.5.0",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
@@ -35,7 +36,6 @@
   "license": "ISC",
   "description": "My webpack project",
   "dependencies": {
-    "@fancyapps/ui": "^4.0.31",
     "fancybox": "^3.0.1",
     "swiper": "^8.3.2"
   }
