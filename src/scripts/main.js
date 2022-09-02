@@ -1,4 +1,6 @@
 import { Fancybox } from "@fancyapps/ui";
+import IMask from 'imask';
+
 
 
 // import "fancyapps/ui/dist/fancybox.css";
@@ -30,6 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
     $texts.forEach(($text) => {
         setTypograpyClasses($text);
     });
+
+    // mask
+    const $phonesFields = document.querySelectorAll('.field.--phone');
+    if ($phonesFields.length > 0) {
+        $phonesFields.forEach(($field) => {
+            IMask($field.$area, {
+                mask: '+{7} (000) 000-00-00'
+            })
+        });
+    }
 });
 
 function initDefaultClasses() {
