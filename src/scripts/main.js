@@ -1,7 +1,13 @@
+import { Fancybox } from "@fancyapps/ui";
+
+
+// import "fancyapps/ui/dist/fancybox.css";
+
 import Field from 'Components/field/field';
 import Select from 'Components/select/select';
 import Check from 'Components/check/check';
 import Incdec from 'Components/incdec/incdec';
+import Auth from 'Blocks/auth/auth';
 
 
 const body = document.body;
@@ -17,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Select.init();
     Check.init();
     Incdec.init();
+    Auth.init();
 
     // Typograpy
     const $texts = document.querySelectorAll('.t1, .t2, .t3');

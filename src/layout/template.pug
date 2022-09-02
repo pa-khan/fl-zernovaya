@@ -1,7 +1,7 @@
 doctype html
 block vars
 include mixins
-html(lang="ru")
+html(class="ov" lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="format-detection" content="telephone=no")
@@ -11,8 +11,8 @@ html(lang="ru")
         link(rel="apple-touch-icon" sizes="180x180" href="_/images/favicon.svg")
         link(rel="icon" type="image/svg" sizes="16x16" href="_/images/favicon.svg")
         link(rel="icon" type="image/svg" sizes="32x32" href="_/images/favicon.svg")
-    body
-        .wrap
+    body(class="ov")
+        .wrap(class="ov")
             +style('main.sass')
 
             

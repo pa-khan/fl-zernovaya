@@ -41,3 +41,42 @@
             grid-template-columns: repeat(2, 1fr)
         &.--w3
             grid-template-columns: repeat(3, 1fr)
+
+@media screen and (max-width: 1179px)
+    .catalog
+        &__list
+            &.--w3
+                grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-width: 991px)
+    .catalog
+        &__wrap
+            flex-direction: column
+        &__filter
+            margin-top: 0
+            min-width: 1px
+            width: 100%
+            margin-right: 0
+            margin-bottom: 30px
+        &__list
+            &.--w3
+                grid-template-columns: repeat(2, 1fr)
+        &__sort
+            justify-content: flex-start
+            &-title
+                width: 100%
+                margin-right: 0
+                margin-bottom: 10px
+
+@media screen and (max-width: 767px)
+    .catalog
+        padding-bottom: 70px
+        &__list
+            &.--w3
+                grid-template-columns: 1fr
+        &__sort
+            margin-bottom: 30px
+            &-title
+                // font-size: 14px
+            &-select
+                margin-bottom: 10px

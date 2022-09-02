@@ -1,0 +1,22 @@
+.file
+    cursor: pointer
+    input
+        display: none
+    &__img
+        width: 77px
+        height: 77px
+    &__wrap
+        cursor: pointer
+    &__title
+        white-space: nowrap
+        width: 10px
+        font-size: 12px
+        line-height: 1.5
+        color: var(--color-gray)
+        margin-top: 10px
+        transition: var(--transition-main)
+        border-bottom: 1px solid transparent
+    &:hover
+        .file
+            &__title
+                color: var(--color-black)

@@ -1,6 +1,7 @@
 extends ../layout/template
 block vars
     -
+        headerGray = true
         title = "Личный кабинет"
         breadcrumbs = [
             ['Главная', 'index.html'],
@@ -9,6 +10,7 @@ block vars
 block content
     include ../components/breadcrumb/breadcrumb
     +breadcrumb
+    +style('breadcrumb', 'comp')
 
     - paData = true
     include ../blocks/pa/pa

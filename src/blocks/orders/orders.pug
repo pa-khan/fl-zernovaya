@@ -1,0 +1,42 @@
+include ../c-item/c-item
+
++style('c-item', 'blocks')
++style('orders', 'blocks')
+
+.pa__orders.orders.case
+    nav.orders__links
+        a.orders__link.--current(href="") Текущие заказы #[span 5]
+        a.orders__link(href="") Выполненные заказы #[span 2]
+    .orders__wrap
+        .orders__row.--head
+            .orders__col Тип заказа
+            .orders__col Номер
+            .orders__col Дата отгрузки
+            .orders__col Статус
+            .orders__col Сумма
+            .orders__col
+        mixin ordersRow
+            .orders__item
+                .orders__row
+                    .orders__col Кофе из офиса в Москве
+                    .orders__col №8289
+                    .orders__col 01.02.2022
+                    .orders__col.--bold Отгружен
+                    .orders__col.--bold 3099 ₽
+                    .orders__col
+                        a.orders__btn.btn.--xs.--bg-black(href="orders-item.html") Подробнее о заказе
+                        .orders__btn-more.btn
+                            .btn__text Состав
+                            .btn__icon
+                                +img('chevron.svg', 'icon')
+                .orders__products
+                    +cartItem()(class="orders__product" hideRemove=true)
+                    +cartItem()(class="orders__product" hideRemove=true)
+                    +cartItem()(class="orders__product" hideRemove=true)
+        +ordersRow
+        +ordersRow
+        +ordersRow
+        +ordersRow
+
++script('product', 'blocks')
++script('orders', 'blocks')

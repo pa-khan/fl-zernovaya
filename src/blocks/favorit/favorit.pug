@@ -1,4 +1,13 @@
+include ../c-item/c-item
+
++style('favorit', 'blocks')
++style('c-item', 'blocks')
+
 section.favorit.case
     .favorit__title Избранные товары #[var 2]
     .favorit__list
-        .favorit__item
+        +cartItem()(class="favorit__item --favorit" hideRemove=true favorit=true)
+        +cartItem()(class="favorit__item --favorit" hideRemove=true favorit=true)
+        +cartItem()(class="favorit__item --favorit" hideRemove=true favorit=true)
+
++script('product', 'blocks')

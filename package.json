@@ -35,6 +35,8 @@
   "license": "ISC",
   "description": "My webpack project",
   "dependencies": {
+    "@fancyapps/ui": "^4.0.31",
+    "fancybox": "^3.0.1",
     "swiper": "^8.3.2"
   }
 }

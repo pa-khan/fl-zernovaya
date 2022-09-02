@@ -3,6 +3,7 @@
 @import reset
 
 @import 'Styles/swiper'
+@import "@fancyapps/ui/dist/fancybox.css"
 
 @import 'Components/case/case'
 @import 'Components/btn/btn'
@@ -230,3 +231,29 @@
         ul
             li
                 font-size: 20px
+
+.fancybox__backdrop
+    background: #545454
+    opacity: 0.5
+    animation: none !important
+
+.modal
+    display: none
+    width: 100%
+    max-width: 420px
+    text-align: center
+    background: #FFFFFF
+    border-radius: 5px
+    padding: 38px 55px
+    &__title
+        margin-bottom: 30px
+    &__text
+        font-size: 18px
+        line-height: 1.5
+    &__field
+        margin-bottom: 20px
+    &__btn
+        width: 100%
+        max-width: 200px
+        margin-left: auto
+        margin-right: auto

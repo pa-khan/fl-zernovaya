@@ -41,6 +41,20 @@
         &:hover
             path
                 fill: var(--color-black)
+    &__btn-favorit
+        position: relative
+        z-index: 5
+        margin-left: auto
+        width: 24px
+        transition: var(--transition-main)
+        svg
+            position: relative
+            &:nth-of-type(2)
+                position: absolute
+                top: 2px
+                left: 0
+                transition: var(--transition-main)
+                transform: scale(0)
     &__body
         display: flex
         flex-wrap: wrap
@@ -81,3 +95,11 @@
         line-height: 1.5
         font-weight: 500
         margin-top: 4px
+    &.--favorit
+        .c-item
+            &__btn-favorit
+                svg
+                    &:nth-of-type(1)
+                        transform: scale(0)
+                    &:nth-of-type(2)
+                        transform: scale(1)

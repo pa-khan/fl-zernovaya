@@ -1,3 +1,4 @@
++style('auth', 'blocks')
 .auth
     .auth__wrap
         .auth__img-wrap
@@ -6,101 +7,106 @@
         .auth__content
             .auth__head
                 .auth__logo
-                    +img('logo.svg')
-                .auth__close
+                    +img('logo.svg', 'icon')
+                .auth__close.auth-toggle
+                    +img('cancel.svg', 'icon')
             .auth__body
-                .auth__tab.--type-login
-                    .auth__title Вход в личный кабинет
+                .auth__tab#auth-type-login
+                    .auth__title.h3 Вход в личный кабинет
                     .auth__subtitle Выберите вариант пользователя
                     .auth__types
-                        .auth__type
+                        .auth__type.auth-set(data-src="#auth-login")
                             .auth__type-icon
-                                +img('user.svg')
+                                +img('user.svg', 'icon')
                             .auth__type-inner
                                 .auth__type-title Розничный клиент
                                 .auth__type-desc Вход для розничных клиетов
-                        .auth__type
+                        .auth__type.auth-set(data-src="#auth-login")
                             .auth__type-icon
-                                +img('user.svg')
+                                +img('user.svg', 'icon')
                             .auth__type-inner
                                 .auth__type-title Оптовый клиент
                                 .auth__type-desc Вход для оптовых клиетов
-                    .auth__link Нет учетной записи? #[a(href="javascript:;") Зарегистрироваться]
-                .auth__tab.--login
-                    .auth__title Вход
+                    .auth__link Нет учетной записи? #[a(href="javascript:;" data-src="#auth-type-reg" class="auth-set") Зарегистрироваться]
+                .auth__tab#auth-login
+                    .auth__title.h3 Вход
                     .auth__subtitle Введите данные пользователя
                     .auth__form
-                        .auth__field.field.--md.--b-gray.--email.--required
+                        .auth__field.field.--md.--b-gray.--radius.--email.--required
                             .field__wrap
                                 .field__placeholder E-mail
                                 input.field__area(type="text" name="user_name")
-                        .auth__field.field.--md.--b-gray.--password.--required
+                        .auth__field.field.--md.--b-gray.--radius.--password.--required
                             .field__wrap
                                 .field__placeholder Пароль
                                 input.field__area(type="password" name="password")
-                        button.auth__btn.btn.--md.--bg-black Войти
-                    .auth__link Забыли пароль? #[a(href="") Восстановить пароль]
+                        button.auth__btn.btn.--md.--round.--bg-black Войти
+                    .auth__link Забыли пароль? #[a(href="javascript:;" data-src="#auth-reset-1" class="auth-set") Восстановить пароль]
 
-                .auth__tab.--reset
-                    .auth__title Восстановить пароль
+                .auth__tab#auth-reset-1
+                    .auth__title.h3 Восстановить пароль
                     .auth__subtitle Введите e-mail мы отправим на него письмо для восстановления пароля
+                    .auth__form
+                        .auth__field.field.--md.--b-gray.--radius.--email.--required
+                            .field__wrap
+                                .field__placeholder E-mail
+                                input.field__area(type="text" name="user_name")
+                        button.auth__btn.btn.--md.--round.--bg-black Сохранить пароль
+                    .auth__link #[a(href="javascript:;" data-src="#auth-login" class="auth-set") Вернуться назад]
+
+                .auth__tab#auth-reset-2
+                    .auth__title.h3 Восстановить пароль
                     .auth__subtitle Введите новый пароль
                     .auth__form
-                        .auth__field.field.--md.--b-gray.--email.--required
-                            .field__wrap
-                                .field__placeholder E-mail
-                                input.field__area(type="text" name="user_name")
-                        .auth__field.field.--md.--b-gray.--password.--required
+                        .auth__field.field.--md.--b-gray.--radius.--password.--required
                             .field__wrap
                                 .field__placeholder Пароль
                                 input.field__area(type="password" name="password")
-                        button.auth__btn.btn.--md.--bg-black Восстановить пароль
-                        button.auth__btn.btn.--md.--bg-black Сохранить пароль
-                    .auth__link #[a(href="javascript:;") Вернуться назад]
-                    .auth__link #[a(href="javascript:;") Вернуться назад]
+                        button.auth__btn.btn.--md.--round.--bg-black Восстановить пароль
+                        button.auth__btn.btn.--md.--round.--bg-black Сохранить пароль
+                    .auth__link #[a(href="javascript:;" data-src="#auth-reset-1" class="auth-set") Вернуться назад]
 
-                .auth__tab.--type-reg
-                    .auth__title Регистрация
+                .auth__tab#auth-type-reg
+                    .auth__title.h3 Регистрация
                     .auth__subtitle Выберите вариант пользователя
                     .auth__types
-                        .auth__type
+                        .auth__type.auth-set(data-src="#auth-reg")
                             .auth__type-icon
-                                +img('user.svg')
+                                +img('user.svg', 'icon')
                             .auth__type-inner
                                 .auth__type-title Розничный клиент
                                 .auth__type-desc Вход для розничных клиетов
-                        .auth__type
+                        .auth__type.auth-set(data-src="#auth-reg")
                             .auth__type-icon
-                                +img('user.svg')
+                                +img('user.svg', 'icon')
                             .auth__type-inner
                                 .auth__type-title Оптовый клиент
                                 .auth__type-desc Вход для оптовых клиетов
-                    .auth__link Уже есть учетная запись? #[a(href="javascript:;") Войти]
+                    .auth__link Уже есть учетная запись? #[a(href="javascript:;" data-src="#auth-type-login" class="auth-set") Войти]
 
-                .auth__tab.--reg
-                    .auth__title Регистрация
+                .auth__tab#auth-reg
+                    .auth__title.h3 Регистрация
                     .auth__subtitle Введите данные пользователя
                     .auth__form
-                        .auth__field.field.--md.--b-gray.--name.--required
+                        .auth__field.field.--md.--b-gray.--radius.--name.--required
                             .field__wrap
                                 .field__placeholder Имя и фамилия
                                 input.field__area(type="text" name="name")
-                        .auth__field.field.--md.--b-gray.--phone.--required
+                        .auth__field.field.--md.--b-gray.--radius.--phone.--required
                             .field__wrap
                                 .field__placeholder Телефон
                                 input.field__area(type="tel" name="phone")
-                        .auth__field.field.--md.--b-gray.--email.--required
+                        .auth__field.field.--md.--b-gray.--radius.--email.--required
                             .field__wrap
                                 .field__placeholder E-mail
                                 input.field__area(type="email" name="email")
-                        .auth__field.field.--md.--b-gray.--password.--required
+                        .auth__field.field.--md.--b-gray.--radius.--password.--required
                             .field__wrap
                                 .field__placeholder Пароль
                                 input.field__area(type="password" name="password")
-                        button.auth__btn.btn.--md.--bg-black Создать учетную запись
-                    .auth__link Уже есть учетная запись? #[a(href="javascript:;") Войти]
+                        button.auth__btn.btn.--md.--round.--bg-black Создать учетную запись
+                    .auth__link Уже есть учетная запись? #[a(href="javascript:;" data-src="#auth-type-login" class="auth-set") Войти]
 
-                .auth__tab.--reg-thanks
-                    .auth__title Регистрация прошла успешно!
-                    a.auth__btn.btn.--md.--bg-black(href="pa.html") Войти в личный кабинет
-+style('auth', 'blocks')
+                .auth__tab#auth-reg-thanks
+                    .auth__title.h3 Регистрация прошла успешно!
+                    a.auth__btn.btn.--md.--bg-black.--round(href="pa.html") Войти в личный кабинет

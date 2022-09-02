@@ -1,2 +1,161 @@
 .auth
-    display: none
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0
+    visibility: hidden
+    transition: var(--transition-main)
+    overflow-y: auto
+    &.--open
+        opacity: 1
+        visibility: visible
+        .auth
+            &__img-wrap, &__content
+                // transform: translateX(0)
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        overflow-y: auto
+        height: 100%
+    &__img-wrap
+        width: 30%
+        // height: 100%
+        transition: var(--transition-main)
+        // transform: translateX(-100%)
+        picture, img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__img
+        width: 100%
+        height: 100%
+    &__content
+        display: flex
+        flex-direction: column
+        width: 70%
+        padding: 45px 105px
+        background-color: #fff
+        // transform: translateX(100%)
+        transition: var(--transition-main)
+
+    &__head
+        display: flex
+        align-items: center
+    &__close
+        margin-left: auto
+        cursor: pointer
+        &:hover
+            path
+                fill: var(--color-black)
+    &__logo
+        width: 75px
+    &__body
+        margin-top: auto
+        margin-bottom: auto
+    &__tab
+        display: none
+        width: 100%
+        max-width: 425px
+        &.--current
+            display: block
+    &__title
+        margin-bottom: 5px
+    &__subtitle
+        // font-size: 16px
+        line-height: 1
+        color: var(--color-gray)
+        margin-bottom: 30px
+    &__type
+        padding: 28px
+        display: flex
+        align-items: center
+        border: 1px solid #575757
+        box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.04)
+        border-radius: 6px
+        margin-bottom: 20px
+        cursor: pointer
+        transition: var(--transition-main)
+        &:last-child
+            margin-bottom: 0
+        &-icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 52px
+            height: 52px
+            background: var(--color-black)
+            clip-path: path('M25 0L49.7275 17.9656L40.2824 47.0344H9.71758L0.272532 17.9656L25 0Z')
+        &-inner
+            width: calc(100% - 52px)
+            padding-left: 28px
+        &-title
+            line-height: 1
+            font-weight: 500
+            margin-bottom: 10px
+        &-desc
+            font-size: 14px
+            line-height: 1
+            color: var(--color-gray)
+        &:hover
+            border-color: var(--color-black)
+            background-color: var(--color-black)
+            .auth__type
+                &-icon
+                    background: var(--color-white)
+                    path
+                        fill: var(--color-black)
+                &-title
+                    color: var(--color-white)
+                &-desc
+                    opacity: 0.8
+                    color: var(--color-white)
+    &__link
+        line-height: 1
+        margin-top: 30px
+        color: var(--color-gray)
+        a
+            color: var(--color-black)
+            border-bottom: 1px solid var(--color-black)
+            font-weight: 500
+            // margin-left: 5px
+            &:hover
+                border-color: transparent
+    &__field
+        margin-bottom: 20px
+    &__btn
+        display: inline-flex
+        min-width: 275px
+        margin-top: 10px
+        &.btn
+            padding-left: 40px
+            padding-right: 40px
+
+.ov
+    &.overflow-disabled
+        overflow: hidden
+
+@media screen and (max-width: 991px)
+    .auth
+        &__content
+            padding-left: 45px
+            padding-right: 45px
+
+@media screen and (max-width: 679px)
+    .auth
+        &__wrap
+            flex-wrap: nowrap
+            flex-direction: column
+        &__img-wrap
+            order: 2
+            width: 100%
+            height: 100%
+            min-height: 240px
+        &__content
+            width: 100%
+            padding: 20px
+        &__body
+            padding-top: 70px
+            padding-bottom: 70px

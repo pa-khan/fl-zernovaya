@@ -6,7 +6,7 @@
         appearance: none
         border: none
         background-color: transparent
-        outline: none
+        outline: none !important
         font-size: var(--fz-main)
         font-family: var(--ff-main)
         transition: var(--transition-main)
@@ -26,6 +26,10 @@
         height: 100%
         padding-top: 1px
         transition: var(--transition-main)
+    &.--textarea
+        .field
+            &__placeholder
+                align-items: flex-start
     &.--round
         input, textarea
             border-radius: 100px
@@ -52,14 +56,45 @@
     &.--md
         input
             height: 50px
-            padding-left: 20px
-            padding-right: 20px
+        textarea
+            height: 125px
+            padding-top: 9px
+            padding-bottom: 9px
+            line-height: 32px
         input, textarea, .field__placeholder
             padding-left: 20px
             padding-right: 20px
         .field
             &__placeholder
                 padding-top: 1px
+        &.--radius
+            input, textarea
+                border-radius: 6px
+        &.--textarea
+            .field
+                &__placeholder
+                    padding-top: 18px
+    &.--lg
+        input
+            height: 62px
+        textarea
+            height: 200px
+            padding-top: 9px
+            padding-bottom: 9px
+            line-height: 32px
+        input, textarea, .field__placeholder
+            padding-left: 20px
+            padding-right: 20px
+        .field
+            &__placeholder
+                padding-top: 1px
+        &.--radius
+            input, textarea
+                border-radius: 10px
+        &.--textarea
+            .field
+                &__placeholder
+                    padding-top: 18px
     &.--filled, &.--focus
         .field
             &__placeholder

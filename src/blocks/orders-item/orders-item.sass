@@ -1,0 +1,40 @@
+.orders-item
+    &__title
+        display: flex
+        align-items: center
+        margin-bottom: 30px
+        svg
+            width: 12px
+            height: 21px
+            margin-right: 10px
+            transform: rotate(180deg)
+            path
+                fill: var(--color-black)
+    &__subtitle
+        font-weight: 400
+        margin-bottom: 32px
+    &__btn
+        display: inline-flex
+        border-radius: 5px
+        min-width: 155px
+        margin-bottom: 17px
+        .btn
+            &__icon
+                margin-right: 10px
+    &__table
+        width: 100%
+        max-width: 560px
+    &__row
+        display: grid
+        line-height: 1.4
+        padding-top: 15px
+        padding-bottom: 15px
+        grid-template-columns: 2.5fr 2fr 1fr
+        &.--head
+            font-size: 14px
+            color: var(--color-gray)
+            border-bottom: 1px solid #DDDDDD
+            padding-bottom: 10px
+    &__col
+        &.--bold
+            font-weight: 700

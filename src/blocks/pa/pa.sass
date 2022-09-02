@@ -1,0 +1,76 @@
+.pa
+    padding-bottom: 70px
+    &__head
+        background: var(--color-white-dark)
+
+    &__title
+        margin-bottom: 20px
+    &__nav
+        display: flex
+        flex-wrap: wrap
+        &-link
+            display: block
+            line-height: 1.5
+            margin-right: 40px
+            padding: 10px
+            border-bottom: 1px solid transparent
+            &:last-child
+                margin-right: 0
+            span
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                vertical-align: middle
+                width: 18px
+                height: 18px
+                border-radius: 50%
+                color: var(--color-white)
+                font-size: 10px
+                line-height: 1.5
+                font-weight: 500
+                padding-top: 2px
+                background: var(--color-gray)
+            &.--current, &:hover
+                border-color: var(--color-black)
+
+    &__wrap
+        padding-top: 40px
+
+    &__user
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+        &-name
+            margin-left: 18px
+            margin-top: -20px
+    &__balance
+        line-height: 1.5
+        color: var(--color-gray)
+        margin-bottom: 20px
+        var
+            color: var(--color-black)
+            font-weight: 500
+    &__subtitle
+        font-size: 18px
+        line-height: 1.5
+        margin-bottom: 30px
+
+    &__form
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        max-width: calc(600px + 20px)
+        margin-left: -10px
+        margin-right: -10px
+        &-col
+            min-width: 50%
+            padding-left: 10px
+            padding-right: 10px
+    &__field
+        margin-bottom: 20px
+        .field
+            &__placeholder, &__area
+                font-size: 14px
+    &__btn
+        width: 100%
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15)

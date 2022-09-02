@@ -45,12 +45,12 @@ header.header(class=headerGray ? '--gray' : null)
                 +img('cart.svg')
                 .btn__label 12
             .btn__text Корзина
-        .header__btn.header__btn-favorit.btn
+        a.header__btn.header__btn-favorit.btn(href="favorits.html")
             .btn__icon
                 +img('heart.svg', 'icon')
                 .btn__label 5
             .btn__text Избранное
-        .header__btn.header__btn-auth.btn
+        .header__btn.header__btn-auth.btn.auth-toggle
             .btn__icon
                 +img('user-round.svg', 'icon')
             .btn__text Войти

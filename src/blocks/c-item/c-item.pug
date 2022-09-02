@@ -7,8 +7,13 @@ mixin cartItem
             .c-item__head
                 .c-item__name #[a(href="product.html") Эфиопия Акация]
                 .c-item__vendor-code Артикул: 084
-                .c-item__remove.btn.product__btn-remove
-                    +img('cancel.svg', 'icon')
+                if !attributes.hideRemove
+                    .c-item__remove.btn.product__btn-remove
+                        +img('cancel.svg', 'icon')
+                if attributes.favorit
+                    .c-item__btn-favorit.product__btn-favorit.btn
+                        +img('heart.svg', 'icon')
+                        +img('heart-bg.svg', 'icon')
             .c-item__body
                 .c-item__select-wrap
                     .c-item__select.product__select.select.--bb

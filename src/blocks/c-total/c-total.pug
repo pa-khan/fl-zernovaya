@@ -5,18 +5,22 @@
         .c-total__title Сумма заказа:
     if cTotalOrder
         .c-total__list
-            .c-total__item
-                .c-total__img-wrap
-                    .c-total__img
-                        img('product-1.png')
-                .c-total__content
-                    .c-total__head
-                        .c-total__name Эфиопия Акация
-                        .c-total__weight 200 г.
-                        .c-total__btn-remove.btn
-                    .c-total__body
-                        .c-total__count 2 шт.
-                        .c-total__price 6099 ₽
+            mixin c-totalItem
+                .c-total__item
+                    .c-total__img-wrap
+                        .c-total__img
+                            +img('product-1.png')
+                    .c-total__content
+                        .c-total__head
+                            .c-total__name Эфиопия Акация
+                            .c-total__weight 200 г.
+                            .c-total__btn-remove
+                                +img('cancel.svg', 'icon')
+                        .c-total__body
+                            .c-total__count 2 шт.
+                            .c-total__price 6099 ₽
+            +c-totalItem
+            +c-totalItem
     .c-total__data
         .c-total__data-item
             .c-total__data-name 3 товара
@@ -30,13 +34,14 @@
         .c-total__data-item
             .c-total__data-name Баллы за покупку
             .c-total__data-value 100 баллов
-        .c-total__data-item.--bold
+        .c-total__data-item.--bold.--lg
             .c-total__data-name Итого
             .c-total__data-value 9000 ₽
-    if cTotalOrder
-        button.c-total__btn-submit.btn.--md.--bg-black Оформить заказ
+    if !cTotalOrder
+        a.c-total__btn-submit.btn.--md.--bg-black.--round(href="order.html") Оформить заказ
     else
-        button.c-total__btn-submit.btn.--md.--bg-black Заказать
+        a.c-total__btn-submit.btn.--md.--bg-black.--round(href="javascript:;" data-fancybox="" data-src="#order-modal-thanks") Заказать
 
     if cTotalOrder
         .c-total__policy Отправляя заявку, вы соглашаетесь на обработку персональных данных в соответствии с <br> #[a(href="/privacy-policy.html") политикой обработки персональных данных.] 
++style('c-total', 'blocks')

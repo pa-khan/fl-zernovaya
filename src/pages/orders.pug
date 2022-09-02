@@ -1,14 +1,17 @@
 extends ../layout/template
 block vars
     -
+        headerGray = true
         title = "Заказы"
         breadcrumbs = [
             ['Главная', 'index.html'],
+            ['Личный кабинет', 'pa.html'],
             [title]
         ]
 block content
     include ../components/breadcrumb/breadcrumb
     +breadcrumb
+    +style('breadcrumb', 'comp')
 
     - paOrders = true
     include ../blocks/pa/pa

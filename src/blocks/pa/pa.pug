@@ -1,88 +1,71 @@
++style('pa', 'blocks')
+
 section.pa
-    .pa__case.case
-        .pa__title.h2 #[h1 ]
+    .pa__head.pa__case.case
+        .pa__title.h2 #[h1 Личный кабинет]
         nav.pa__nav
-            a.pa__nav-link(href="" class=paData ? '--selected' : null) Личные данные
-            a.pa__nav-link(href="" class=paOrders ? '--selected' : null) Мои заказы
-            a.pa__nav-link(href="" class=paAddress ? '--selected' : null) Адреса
-            a.pa__nav-link(href="" class=paNots ? '--selected' : null) Уведомления #[span 5]
-            a.pa__nav-link(href="" class=paFavorit ? '--selected' : null) Избранное
+            a.pa__nav-link(href="pa.html" class=paData ? '--current' : null) Личные данные
+            a.pa__nav-link(href="orders.html" class=paOrders || paOrdersItem ? '--current' : null) Мои заказы
+            a.pa__nav-link(href="addresses.html" class=paAddress ? '--current' : null) Адреса
+            a.pa__nav-link(href="nots.html" class=paNots ? '--current' : null) Уведомления #[span 5]
+            a.pa__nav-link(href="favorits.html" class=paFavorit ? '--current' : null) Избранное
     .pa__wrap.case
         if paData
             .pa__user
+                +style('file', 'comp')
                 .pa__user-avatar.file
-                    input(type="file" name="avatar")
-                    .file__img
-                        +img('avatar.png')
-                    .file__title Изменить фото профиля
-                .pa__user-name
+                    input(type="file" name="avatar" id="file-1" accept="image/*")
+                    label.file__wrap(for="file-1")
+                        .file__img
+                            +img('avatar.png')
+                        .file__title Изменить фото профиля
+                .pa__user-name.h3 Иван Иванов
+                +script('file', 'comp')
             .pa__balance Баланс бонусов: #[var 450 USC]
             .pa__subtitle Редактировать данные
             .pa__form
                 .pa__form-col
-                    .pa__field.field.--md.--b-gray.--name.--required
+                    .pa__field.field.--md.--b-gray.--radius.--name.--required
                         .field__wrap
                             .field__placeholder ФИО
                             input.field__area(type="name" name="name")
-                    .pa__field.field.--md.--b-gray.--phone.--required
+                    .pa__field.field.--md.--b-gray.--radius.--phone.--required
                         .field__wrap
                             .field__placeholder Телефон
                             input.field__area(type="tel" name="phone")
-                    .pa__field.field.--md.--b-gray.--email.--required
+                    .pa__field.field.--md.--b-gray.--radius.--email.--required
                         .field__wrap
                             .field__placeholder E-mail
                             input.field__area(type="email" name="email")
-                    .pa__field.field.--md.--b-gray.--password.--required
+                    .pa__field.field.--md.--b-gray.--radius.--password.--required
                         .field__wrap
                             .field__placeholder Пароль
                             input.field__area(type="password" name="phone")
 
                 .pa__form-col
-                    .pa__field.field.--md.--b-gray.--required(data-min="5")
+                    .pa__field.field.--md.--b-gray.--radius.--required(data-min="5")
                         .field__wrap
                             .field__placeholder Полное наименование организации
                             input.field__area(type="text" name="org")
-                    .pa__field.field.--md.--b-gray.--required(data-min="10")
+                    .pa__field.field.--md.--b-gray.--radius.--required(data-min="10")
                         .field__wrap
                             .field__placeholder Юр. адрес
                             input.field__area(type="text" name="ur")
-                    .pa__field.field.--md.--b-gray.--required(data-min="10")
+                    .pa__field.field.--md.--b-gray.--radius.--required(data-min="10")
                         .field__wrap
                             .field__placeholder ИНН
                             input.field__area(type="tel" name="inn")
-                    .pa__field.field.--md.--b-gray.--required(data-min="10")
+                    .pa__field.field.--md.--b-gray.--radius.--required(data-min="10")
                         .field__wrap
                             .field__placeholder КПП
                             input.field__area(type="tel" name="kpp")
 
                 .pa__form-col
-                    button.pa__btn.btn.--lg.--bg-black Сохранить
+                    button.pa__btn.btn.--md.--bg-black.--round Сохранить
 
     if paOrders
-        .pa__orders.pa-orders
-            nav.pa-orders__links
-                a.pa-orders__link.--selected(href="") Текущие заказы #[span 5]
-                a.pa-orders__link(href="") Выполненные заказы #[span 2]
-            .pa-orders__list
-                .pa-orders__item
-                    .pa-orders__row.--head
-                        .pa-orders__col Тип заказа
-                        .pa-orders__col Номер
-                        .pa-orders__col Дата отгрузки
-                        .pa-orders__col Статус
-                        .pa-orders__col Сумма
-                        .pa-orders__col
-                    .pa-orders__row
-                        .pa-orders__col Кофе из офиса в Москве
-                        .pa-orders__col №8289
-                        .pa-orders__col 01.02.2022
-                        .pa-orders__col.--bold Отгружен
-                        .pa-orders__col.--bold 3099 ₽
-                        .pa-orders__col
-                            a.pa-orders__btn.btn.--xs.--bg-black(href="") Подробнее о заказе
-                            .pa__btn-more.btn
-                                .btn__text Состав
-                    .pa-orders__products
+        include ../orders/orders
+        
     if paOrdersItem
         include ../orders-item/orders-item
     if paAddress

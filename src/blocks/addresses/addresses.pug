@@ -1,10 +1,12 @@
 section.addresses.case
     .addresses__form
         .addresses__list
-            .addresses__item.field.--lgg.--b-gray(data-min="10")
+            .addresses__item.field.--lg.--b-gray.--radius(data-min="10")
                 .field__wrap
-                    input.field__area(type="text" name="address[0]")
-        button.addresses__btn-add.btn.--lg.--bg-black
+                    input.field__area(type="text" name="address[0]" value="г. Тула, ул. Победы, д.20")
+        button.addresses__btn-add.btn.--lg.--bg-black.--round
             .btn__icon
                 +img('plus.svg')
             .btn__text Добавить адрес
++style('addresses', 'blocks')
++script('addresses', 'blocks')

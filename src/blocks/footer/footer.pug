@@ -20,31 +20,31 @@ footer.footer(class=footerWhite = '--white' : null)
             a.footer__logo
                 +img('logo.svg', 'icon')
             .footer__copy Все права защищены.
-            .footer__link #[a(href="") Политика конфиденциальности]
+            .footer__link #[a(href="privacy-policy.html") Политика конфиденциальности]
         nav.footer__nav.row
             .footer__nav-item
-                a.footer__nav-link(href="") Каталог товаров 
+                a.footer__nav-link(href="catalog.html") Каталог товаров 
             .footer__nav-item
-                a.footer__nav-link(href="") Доставка и оплата
+                a.footer__nav-link(href="delivery-pay.html") Доставка и оплата
             .footer__nav-item
-                a.footer__nav-link(href="") Оптовые предложения
+                a.footer__nav-link(href="opt.html") Оптовые предложения
             .footer__nav-item
-                a.footer__nav-link(href="") Блог
+                a.footer__nav-link(href="blog.html") Блог
             .footer__nav-item
-                a.footer__nav-link(href="") О нас
+                a.footer__nav-link(href="about.html") О нас
             .footer__nav-item
-                a.footer__nav-link(href="") Контакты
+                a.footer__nav-link(href="contacts.html") Контакты
         .footer__contacts
             .footer__feedback.row
                 .footer__socials
                     .footer__socials-list.row
-                        a.footer__socials-item(href="" target="_blank")
+                        a.footer__socials-item(href="https://youtube.com" target="_blank")
                             +img('youtube.svg')
-                        a.footer__socials-item(href="" target="_blank")
+                        a.footer__socials-item(href="https://facebook.com" target="_blank")
                             +img('facebook.svg')
                 .footer__phone #[a(href="tel:+79780000000") +7 (978) 000 00 00]
 
-            .footer__callback #[a(href="" data-fancybox="" data-src="#modal-callback") Заказать звонок]
+            .footer__callback #[a(href="javascript:;" data-fancybox="" data-src="#modal-callback") Заказать звонок]
 
             .footer__pays.row
                 .footer__pay
@@ -52,3 +52,20 @@ footer.footer(class=footerWhite = '--white' : null)
                 .footer__pay
                     +img('matercard.png')
 
+
+.modal#modal-callback
+    .modal__title.h3 Заказать обратный звонок
+    form.modal__form
+        .modal__field.field.--md.--b-gray.--radius.--name.--required
+            .field__wrap
+                .field__placeholder ФИО
+                input.field__area(type="name" name="name")
+        .modal__field.field.--md.--b-gray.--radius.--phone.--required
+            .field__wrap
+                .field__placeholder Телефон
+                input.field__area(type="tel" name="phone")
+        button.modal__btn.btn.--md.--bg-black.--round Отправить
+
+.modal#modal-thanks
+    .modal__title.h3 Спасибо
+    .modal__text Ваша заявка успешно отправлена

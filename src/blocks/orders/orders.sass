@@ -1,0 +1,79 @@
+.orders
+    &__links
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 30px
+    &__link
+        display: flex
+        align-items: center
+        font-size: 18px
+        line-height: 1.5
+        margin-right: 40px
+        color: var(--color-gray)
+        &.--current
+            color: var(--color-black)
+            font-weight: 500
+        span
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-left: 10px
+            font-size: 10px
+            line-height: 1.5
+            font-weight: 500
+            width: 18px
+            height: 18px
+            padding-top: 2px
+            border-radius: 50%
+            color: var(--color-white)
+            background-color: var(--color-gray)
+    &__item
+        border-bottom: 1px solid #DDDDDD
+    &__row
+        display: grid
+        padding-top: 20px
+        padding-bottom: 20px
+        grid-template-columns: 20% 22% 15% 15% 10% 18%
+        &.--head
+            font-size: 16px
+            line-height: 1.4
+            color: var(--color-gray)
+            padding-top: 20px
+            padding-bottom: 20px
+            border-bottom: 1px solid #DDDDDD
+    &__col
+        padding-left: 10px
+        padding-right: 10px
+        padding-top: 4px
+    &__btn
+        margin-top: -4px
+        border-radius: 6px
+    &__btn-more
+        margin-top: 10px
+        transform: none !important
+        .btn
+            &__icon
+                transform: rotate(90deg)
+                transition: var(--transition-main)
+                margin-left: 15px
+                path
+                    fill: var(--color-black)
+        &.--open
+            .btn
+                &__icon
+                    transform: rotate(-90deg)
+    &__products
+        display: none
+        background: #FAFAFA
+        border-radius: 5px
+        max-width: 560px
+        padding: 20px 25px
+        &.--open
+            display: block
+    &__product
+        --c-item-img-width: 100px
+        .c-item
+            &__content
+                padding-left: 20px
+            &__head
+                margin-bottom: 0

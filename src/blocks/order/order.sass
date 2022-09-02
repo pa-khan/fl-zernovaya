@@ -1,0 +1,86 @@
+.order
+    --cart-total-width: 465px
+    padding-bottom: 100px
+    &__wrap
+        align-items: flex-start
+    &__title
+        margin-bottom: 45px
+        h1, span
+            display: inline
+        span
+            font-size: 14px
+            line-height: 1.5
+            font-weight: 400
+            color: var(--color-gray)
+            margin-left: 9px
+    &__steps
+        width: calc(100% - var(--cart-total-width))
+        padding-right: 175px
+    &__step
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+    &__head
+        display: flex
+        align-items: center
+        margin-bottom: 20px
+    &__count
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        color: var(--color-black)
+        font-size: 14px
+        line-height: 1.5
+        font-weight: 500
+        padding-top: 2px
+        border: 1px solid var(--color-black)
+        background-color: var(--color-white)
+        margin-right: 10px
+        &.--current
+            color: var(--color-white)
+            background-color: var(--color-black)
+    &__subtitle
+        padding-top: 3px
+    &__body
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: -20px
+
+    &__field
+        width: calc(100% / 2 - 10px)
+        margin-bottom: 20px
+        &.--full
+            width: 100%
+    &__radios
+        width: 100%
+        margin-bottom: 20px
+
+    &__radio
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+
+    &__total
+        width: var(--cart-total-width)
+
+    &__modal
+        display: none
+        width: 100%
+        max-width: 560px
+        text-align: center
+        background: #FFFFFF
+        border-radius: 5px
+        padding: 38px 55px
+        &-title
+            margin-bottom: 11px
+        &-link
+            font-size: 18px
+            line-height: 150%
+            a
+                border-bottom: 1px solid var(--color-black)
+                &:hover
+                    border-color: transparent

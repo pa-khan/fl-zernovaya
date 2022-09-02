@@ -1,6 +1,7 @@
 extends ../layout/template
 block vars
     -
+        headerGray = true
         title = "Оформление заказа"
         breadcrumbs = [
             ['Главная', 'index.html'],
@@ -9,5 +10,6 @@ block vars
 block content
     include ../components/breadcrumb/breadcrumb
     +breadcrumb
+    +style('breadcrumb', 'comp')
 
     include ../blocks/order/order
