@@ -1,18 +1,21 @@
 .blog
     padding-bottom: 100px
     &__title
-        margin-bottom: 45px
+        margin-bottom: 50px
     &__list
         margin: 0 -10px -20px
     &__item
         width: calc(100% / 3 - 20px)
-        height: 380px
+        height: 372px
         margin: 0 10px 20px
         color: #fff
         overflow: hidden
         border-radius: 5px
         &.--lg
             width: calc(100% / 3 * 2 - 20px)
+            .blog
+                &__inner
+                    padding: 30px
         &:hover
             .blog
                 &__bg
@@ -23,7 +26,7 @@
         &-item
             display: flex
             align-items: center
-            margin-bottom: 19px
+            margin-bottom: 15px
             margin-right: 20px
             &:last-child
                 margin-right: 0
@@ -75,6 +78,8 @@
             right: 0
             bottom: 0
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.53) 67.57%)
+    &__pagination
+        margin-top: 40px
 
 @media screen and (max-width: 991px)
     .blog
@@ -87,12 +92,24 @@
     .blog
         padding-bottom: 50px
         &__title
-            margin-bottom: 35px
+            margin-bottom: 40px
+        &__pagination
+            margin-top: 0
 
 @media screen and (max-width: 630px)
     .blog
+        padding-bottom: 70px
+        &__list
+            margin: 0 -10px -10px
         &__item
             width: calc(100% - 20px)
+            margin: 0 10px 10px
             height: 345px
             &.--lg
                 width: calc(100% - 20px)
+                .blog
+                    &__inner
+                        padding: 30px 20px
+        &__data
+            &-item
+                margin-right: 15px
