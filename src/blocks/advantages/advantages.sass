@@ -47,6 +47,9 @@
 
 @media screen and (max-width: 991px)
     .advantages
+        padding-top: 60px
+        padding-bottom: 60px
+        background: #212128
         &__item
             width: calc(50% - 10px)
             &:last-of-type
@@ -57,10 +60,12 @@
             svg
                 width: 100%
                 height: 100%
+        &__bg
+            display: none
 
 @media screen and (max-width: 767px)
     .advantages
-        padding-top: 130px
+        // padding-top: 130px
         &__list
             gap: 0
             grid-gap: 0
