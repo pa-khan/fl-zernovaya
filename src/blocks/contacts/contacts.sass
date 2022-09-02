@@ -7,14 +7,16 @@
         background-color: var(--color-white-dark)
     &__col
         width: 335px
-        margin-right: 95px
+        margin-right: 75px
         &:nth-of-type(2)
+            width: 380px
             margin-right: 0
     &__item
         font-size: 20px
         line-height: 32px
         border-bottom: 1px dashed var(--color-black)
-        margin-bottom: 20px
+        padding-bottom: 7px
+        margin-bottom: 22px
         &:last-child
             margin-bottom: 0
     &__name
@@ -25,7 +27,7 @@
     &__form
         width: 100%
         max-width: 500px
-        margin-top: 60px
+        margin-top: 62px
         display: flex
         flex-wrap: wrap
         justify-content: space-between
@@ -40,7 +42,7 @@
             margin-bottom: 20px
         &-btn
             width: calc(50% - 10px)
-            margin-bottom: 17px
+            margin-bottom: 21px
             &.btn
                 font-weight: 700
     &__policy
@@ -62,6 +64,8 @@
             width: 100%
             margin-right: 0
             margin-bottom: 20px
+            &:nth-of-type(2)
+                width: 100%
         &__form
             margin-top: 20px
             &-title
@@ -69,7 +73,12 @@
 
 @media screen and (max-width: 767px)
     .contacts
-        padding-bottom: 50px
+        padding-bottom: 80px
+        &__wrap
+            padding: 34px 30px 34px 32px
+        &__form
+            margin-top: 13px
+
 @media screen and (max-width: 600px)
     .contacts
         &__form
