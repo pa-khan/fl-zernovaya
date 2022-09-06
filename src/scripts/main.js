@@ -12,11 +12,17 @@ import Incdec from 'Components/incdec/incdec';
 import Auth from 'Blocks/auth/auth';
 
 
+const html = document.documentElement;
 const body = document.body;
 // set mode classes
 initDefaultClasses();
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.$cartBtn = document.querySelector('.cart-btn');
+    window.$upBtn = document.querySelector('.up-btn');
+    window.$upBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
     // set css variables
     setSizes();
     window.addEventListener('resize', setSizes);
@@ -42,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
+
+    toggleFixedBtns();
+
+    window.addEventListener('scroll', toggleFixedBtns);
 });
 
 function initDefaultClasses() {
@@ -55,6 +65,7 @@ function initDefaultClasses() {
         window._CLASS.disabled = '--disabled';
         window._CLASS.current = '--current';
         window._CLASS.open = '--open';
+        window._CLASS.show = '--show';
     }
 }
 
@@ -76,4 +87,15 @@ function setTypograpyClasses($element) {
     $element.$children.forEach(($child) => {
         $child.classList.add($child.tagName.toLowerCase());
     });
+}
+
+function toggleFixedBtns() {
+    const scrollTop = html.scrollTop;
+    if (scrollTop >= 400) {
+        window.$cartBtn.classList.add(window._CLASS.show);
+        window.$upBtn.classList.add(window._CLASS.show);
+    } else {
+        window.$cartBtn.classList.remove(window._CLASS.show);
+        window.$upBtn.classList.remove(window._CLASS.show);
+    }
 }

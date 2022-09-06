@@ -262,3 +262,77 @@
     .modal
         padding-left: 15px
         padding-right: 15px
+
+.cart-btn
+    z-index: 50
+    position: fixed
+    top: 50px
+    right: 50px
+    padding: 10px
+    background-color: var(--color-black)
+    border-radius: 50%
+    opacity: 0
+    visibility: hidden
+    transform: translateX(100%)
+    transition: var(--transition-main)
+    box-shadow: 0 0px 4px 5px rgba(255,255,255,0.1)
+    svg
+        width: 100%
+        height: 100%
+    path
+        fill: var(--color-white)
+    span
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: -5px
+        right: -5px
+        border-radius: 50%
+        width: 18px
+        height: 18px
+        font-size: 12px
+        padding-top: 1px
+        color: var(--color-white)
+        background: var(--color-black)
+        transition: var(--transition-main)
+    &.--show
+        transform: translateX(0%)
+        opacity: 1
+        visibility: visible
+
+.up-btn
+    z-index: 50
+    position: fixed
+    right: 50px
+    bottom: 50px
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    padding: 10px
+    background: var(--color-black)
+    transform: translateX(100%)
+    transition: var(--transition-main)
+    visibility: hidden
+    opacity: 0
+    box-shadow: 0 0px 4px 5px rgba(255,255,255,0.1)
+    svg
+        width: 100%
+        height: 100%
+        transform: rotate(-90deg)
+        margin-top: -2px
+
+    &.--show
+        transform: translateX(0%)
+        opacity: 1
+        visibility: visible
+
+@media screen and (max-width: 540px)
+    .cart-btn, .up-btn
+        width: 35px
+        height: 35px
+        right: 15px
+    .cart-btn
+        top: 15px
+    .up-btn
+        bottom: 15px
